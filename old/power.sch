@@ -1,0 +1,642 @@
+EESchema Schematic File Version 4
+LIBS:nfc-door-rescue
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:marelab
+LIBS:nfc-door-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L conn:Screw_Terminal_01x02 J?
+U 1 1 5C84EB1D
+P 1200 2000
+F 0 "J?" H 1250 1800 50  0000 R CNN
+F 1 "PWR IN 12V" H 1750 1950 50  0000 R CNN
+F 2 "" H 1200 2000 50  0001 C CNN
+F 3 "~" H 1200 2000 50  0001 C CNN
+	1    1200 2000
+	-1   0    0    1   
+$EndComp
+$Comp
+L conn:Screw_Terminal_01x02 J?
+U 1 1 5C84ECD7
+P 1350 6100
+F 0 "J?" H 1400 5900 50  0000 R CNN
+F 1 "DOOR 12V OUT" H 2000 6050 50  0000 R CNN
+F 2 "" H 1350 6100 50  0001 C CNN
+F 3 "~" H 1350 6100 50  0001 C CNN
+	1    1350 6100
+	-1   0    0    1   
+$EndComp
+$Comp
+L conn:Screw_Terminal_01x06 J?
+U 1 1 5C84F083
+P 1200 1100
+F 0 "J?" H 1250 700 50  0000 R CNN
+F 1 "RFID" H 1475 1100 50  0000 R CNN
+F 2 "" H 1200 1100 50  0001 C CNN
+F 3 "~" H 1200 1100 50  0001 C CNN
+	1    1200 1100
+	-1   0    0    1   
+$EndComp
+Text Label 1925 2000 2    50   ~ 0
+12VGND
+Text Label 1925 1900 2    50   ~ 0
++12VW
+Text Label 1900 1300 2    50   ~ 0
+PGND
+Text Label 1900 1200 2    50   ~ 0
+PGND
+Text Label 1900 1100 2    50   ~ 0
+PGND
+Text Label 1900 1000 2    50   ~ 0
+PGND
+$Comp
+L power:GND #PWR?
+U 1 1 5C84F8EA
+P 1550 900
+F 0 "#PWR?" H 1550 650 50  0001 C CNN
+F 1 "GND" V 1550 700 50  0000 R CNN
+F 2 "" H 1550 900 50  0001 C CNN
+F 3 "" H 1550 900 50  0001 C CNN
+	1    1550 900 
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5C84F922
+P 1550 800
+F 0 "#PWR?" H 1550 650 50  0001 C CNN
+F 1 "+3.3V" V 1550 925 50  0000 L CNN
+F 2 "" H 1550 800 50  0001 C CNN
+F 3 "" H 1550 800 50  0001 C CNN
+	1    1550 800 
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1400 1000 1900 1000
+Wire Wire Line
+	1400 1100 1900 1100
+Wire Wire Line
+	1400 1200 1900 1200
+Wire Wire Line
+	1400 1300 1900 1300
+Wire Wire Line
+	1400 800  1550 800 
+Wire Wire Line
+	1400 900  1550 900 
+$Comp
+L Diode_Bridge:B125C2300-1500A D?
+U 1 1 5C850046
+P 3025 1925
+F 0 "D?" H 3366 1971 50  0000 L CNN
+F 1 "B125C2300-1500A" H 3175 1750 50  0000 L CNN
+F 2 "Diodes_ThroughHole:Diode_Bridge_Round_D8.9mm" H 3175 2050 50  0001 L CNN
+F 3 "https://diotec.com/tl_files/diotec/files/pdf/datasheets/b40c2300.pdf" H 3025 1925 50  0001 C CNN
+	1    3025 1925
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2125 2000 2125 2400
+Wire Wire Line
+	2125 2400 3025 2400
+Wire Wire Line
+	3025 2400 3025 2225
+Wire Wire Line
+	1400 2000 2125 2000
+Wire Wire Line
+	2125 1900 2125 1525
+Wire Wire Line
+	2125 1525 3025 1525
+Wire Wire Line
+	3025 1525 3025 1625
+Wire Wire Line
+	1400 1900 2125 1900
+$Comp
+L Device:CP C?
+U 1 1 5C85056B
+P 4075 1950
+F 0 "C?" H 4193 1996 50  0000 L CNN
+F 1 "470uF/25V" V 4150 1425 50  0000 L CNN
+F 2 "" H 4113 1800 50  0001 C CNN
+F 3 "~" H 4075 1950 50  0001 C CNN
+	1    4075 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2725 1925 2550 1925
+Wire Wire Line
+	2550 1925 2550 2525
+Wire Wire Line
+	4075 2525 4075 2100
+$Comp
+L Device:Jumper JP?
+U 1 1 5C850A08
+P 3400 1525
+F 0 "JP?" H 3400 1675 50  0000 C CNN
+F 1 "DC-B" H 3400 1450 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x02_Pitch2.54mm" H 3400 1525 50  0001 C CNN
+F 3 "~" H 3400 1525 50  0001 C CNN
+	1    3400 1525
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper JP?
+U 1 1 5C850AA8
+P 3400 2400
+F 0 "JP?" H 3400 2550 50  0000 C CNN
+F 1 "DC-B" H 3400 2325 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x02_Pitch2.54mm" H 3400 2400 50  0001 C CNN
+F 3 "~" H 3400 2400 50  0001 C CNN
+	1    3400 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3325 1925 3900 1925
+Wire Wire Line
+	3900 1925 3900 1525
+Wire Wire Line
+	3100 1525 3025 1525
+Connection ~ 3025 1525
+Wire Wire Line
+	3025 2400 3100 2400
+Connection ~ 3025 2400
+Wire Wire Line
+	3700 2400 3925 2400
+Wire Wire Line
+	3925 2400 3925 2525
+Text Notes 2300 2625 0    50   ~ 0
+DC-B Jumper are set when the input is 12V DC
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5C888A38
+P 7475 1550
+F 0 "TP?" H 7533 1670 50  0000 L CNN
+F 1 "TestPoint 5V" V 7475 1725 50  0000 L CNN
+F 2 "" H 7675 1550 50  0001 C CNN
+F 3 "~" H 7675 1550 50  0001 C CNN
+	1    7475 1550
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5C888AF0
+P 7650 1550
+F 0 "#PWR?" H 7650 1400 50  0001 C CNN
+F 1 "+5V" H 7665 1723 50  0000 C CNN
+F 2 "" H 7650 1550 50  0001 C CNN
+F 3 "" H 7650 1550 50  0001 C CNN
+	1    7650 1550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7475 1550 7475 1525
+Wire Wire Line
+	7475 1525 7650 1525
+Wire Wire Line
+	7650 1525 7650 1550
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5C8AB52E
+P 4575 3125
+F 0 "TP?" H 4633 3245 50  0000 L CNN
+F 1 "TestPoint 3,3V" H 4633 3154 50  0000 L CNN
+F 2 "" H 4775 3125 50  0001 C CNN
+F 3 "~" H 4775 3125 50  0001 C CNN
+	1    4575 3125
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5C8E37CF
+P 4800 3200
+F 0 "#PWR?" H 4800 3050 50  0001 C CNN
+F 1 "+3.3V" H 4815 3373 50  0000 C CNN
+F 2 "" H 4800 3200 50  0001 C CNN
+F 3 "" H 4800 3200 50  0001 C CNN
+	1    4800 3200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Relay_SolidState:TLP3544 U?
+U 1 1 5C8F23C8
+P 3125 6100
+F 0 "U?" H 3125 6425 50  0000 C CNN
+F 1 "TLP3544" H 3125 6334 50  0000 C CNN
+F 2 "Housings_DIP:DIP-6_W8.89mm_SMDSocket_LongPads" H 3125 5800 50  0001 C CNN
+F 3 "https://toshiba.semicon-storage.com/info/docget.jsp?did=12661&prodName=TLP3544" H 3125 6100 50  0001 C CNN
+	1    3125 6100
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2575 6000 2575 6200
+Wire Wire Line
+	2575 6200 2825 6200
+Wire Wire Line
+	2575 6000 2825 6000
+$Comp
+L power:+12V #PWR?
+U 1 1 5C924F49
+P 4075 1400
+F 0 "#PWR?" H 4075 1250 50  0001 C CNN
+F 1 "+12V" H 4090 1573 50  0000 C CNN
+F 2 "" H 4075 1400 50  0001 C CNN
+F 3 "" H 4075 1400 50  0001 C CNN
+	1    4075 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C9336CE
+P 1950 5575
+F 0 "#PWR?" H 1950 5325 50  0001 C CNN
+F 1 "GND" H 1955 5402 50  0000 C CNN
+F 2 "" H 1950 5575 50  0001 C CNN
+F 3 "" H 1950 5575 50  0001 C CNN
+	1    1950 5575
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5C933845
+P 2200 5575
+F 0 "#PWR?" H 2200 5425 50  0001 C CNN
+F 1 "+12V" H 2215 5748 50  0000 C CNN
+F 2 "" H 2200 5575 50  0001 C CNN
+F 3 "" H 2200 5575 50  0001 C CNN
+	1    2200 5575
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 6000 1950 6000
+Wire Wire Line
+	2200 6000 2575 6000
+Connection ~ 2575 6000
+Wire Wire Line
+	1550 6100 2825 6100
+$Comp
+L brunnen:R R?
+U 1 1 5C949EA0
+P 3775 6000
+F 0 "R?" V 3700 6000 50  0000 C CNN
+F 1 "220R" V 3850 6000 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" V 3705 6000 50  0001 C CNN
+F 3 "" H 3775 6000 50  0001 C CNN
+	1    3775 6000
+	0    1    1    0   
+$EndComp
+$Comp
+L brunnen:R R?
+U 1 1 5C949FAA
+P 3775 5600
+F 0 "R?" V 3700 5600 50  0000 C CNN
+F 1 "100K" V 3850 5600 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" V 3705 5600 50  0001 C CNN
+F 3 "" H 3775 5600 50  0001 C CNN
+	1    3775 5600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3425 6000 3625 6000
+$Comp
+L Device:LED D?
+U 1 1 5C951D92
+P 3350 5600
+F 0 "D?" H 3341 5345 50  0000 C CNN
+F 1 "LED" H 3341 5436 50  0000 C CNN
+F 2 "" H 3350 5600 50  0001 C CNN
+F 3 "~" H 3350 5600 50  0001 C CNN
+	1    3350 5600
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C959B9C
+P 2975 5575
+F 0 "#PWR?" H 2975 5325 50  0001 C CNN
+F 1 "GND" H 2980 5402 50  0000 C CNN
+F 2 "" H 2975 5575 50  0001 C CNN
+F 3 "" H 2975 5575 50  0001 C CNN
+	1    2975 5575
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3200 5600 2975 5600
+Wire Wire Line
+	2975 5600 2975 5575
+Wire Wire Line
+	3500 5600 3625 5600
+Wire Wire Line
+	1950 5575 1950 6000
+Text GLabel 4050 6000 2    50   Input ~ 0
+RELAIS-DOOR
+Wire Wire Line
+	3925 6000 3975 6000
+Wire Wire Line
+	3925 5600 3975 5600
+Wire Wire Line
+	3975 5600 3975 6000
+Connection ~ 3975 6000
+Wire Wire Line
+	3975 6000 4050 6000
+$Comp
+L power:GND #PWR?
+U 1 1 5C98B999
+P 3550 6275
+F 0 "#PWR?" H 3550 6025 50  0001 C CNN
+F 1 "GND" H 3555 6102 50  0000 C CNN
+F 2 "" H 3550 6275 50  0001 C CNN
+F 3 "" H 3550 6275 50  0001 C CNN
+	1    3550 6275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3425 6200 3550 6200
+Wire Wire Line
+	3550 6200 3550 6275
+$Comp
+L brunnen:R R?
+U 1 1 5CB0CA80
+P 2200 5800
+F 0 "R?" H 2270 5846 50  0000 L CNN
+F 1 "4R" H 2270 5755 50  0000 L CNN
+F 2 "" V 2130 5800 50  0001 C CNN
+F 3 "" H 2200 5800 50  0001 C CNN
+	1    2200 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 6000 2200 5950
+Wire Wire Line
+	2200 5575 2200 5650
+$Comp
+L Device:D D?
+U 1 1 5CB533B2
+P 4300 1525
+F 0 "D?" H 4300 1309 50  0000 C CNN
+F 1 "D" H 4300 1400 50  0000 C CNN
+F 2 "" H 4300 1525 50  0001 C CNN
+F 3 "~" H 4300 1525 50  0001 C CNN
+	1    4300 1525
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3700 1525 3900 1525
+Wire Wire Line
+	2550 2525 3925 2525
+Wire Wire Line
+	3925 2525 4075 2525
+Connection ~ 3925 2525
+Connection ~ 4075 2525
+Wire Wire Line
+	3900 1525 4075 1525
+Wire Wire Line
+	4075 1400 4075 1525
+Connection ~ 3900 1525
+Connection ~ 4075 1525
+Wire Wire Line
+	4075 1525 4075 1800
+Wire Wire Line
+	4075 1525 4150 1525
+$Comp
+L Device:CP C?
+U 1 1 5CBABF32
+P 4600 1950
+F 0 "C?" H 4718 1996 50  0000 L CNN
+F 1 "470uF/25V" V 4650 1450 50  0000 L CNN
+F 2 "" H 4638 1800 50  0001 C CNN
+F 3 "~" H 4600 1950 50  0001 C CNN
+	1    4600 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 2100 4600 2525
+Wire Wire Line
+	4075 2525 4600 2525
+Connection ~ 4600 2525
+Wire Wire Line
+	4600 1800 4600 1525
+$Comp
+L power:+5V #PWR?
+U 1 1 5CB64E1B
+P 5075 3200
+F 0 "#PWR?" H 5075 3050 50  0001 C CNN
+F 1 "+5V" H 5090 3373 50  0000 C CNN
+F 2 "" H 5075 3200 50  0001 C CNN
+F 3 "" H 5075 3200 50  0001 C CNN
+	1    5075 3200
+	-1   0    0    1   
+$EndComp
+$Comp
+L CHINA_PARTS:LM1117-3,3V U?
+U 1 1 5CB8314E
+P 5350 2975
+F 0 "U?" V 5304 3502 50  0000 L CNN
+F 1 "LM1117-3,3V" V 5395 3502 50  0000 L CNN
+F 2 "" H 5350 2975 50  0001 C CNN
+F 3 "" H 5350 2975 50  0001 C CNN
+	1    5350 2975
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5150 3125 5075 3125
+Wire Wire Line
+	5075 3125 5075 3200
+Wire Wire Line
+	5150 2975 4800 2975
+Wire Wire Line
+	4800 2975 4800 3200
+Wire Wire Line
+	4800 2975 4575 2975
+Wire Wire Line
+	4575 2975 4575 3125
+Connection ~ 4800 2975
+$Comp
+L CHINA_PARTS:ACT4088 U?
+U 1 1 5CBCE907
+P 5725 2075
+F 0 "U?" H 5750 2590 50  0000 C CNN
+F 1 "ACT4088" H 5750 2499 50  0000 C CNN
+F 2 "" H 5725 2075 50  0001 C CNN
+F 3 "" H 5725 2075 50  0001 C CNN
+	1    5725 2075
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5325 1925 4975 1925
+Wire Wire Line
+	4975 1925 4975 1525
+Wire Wire Line
+	4450 1525 4600 1525
+Connection ~ 4600 1525
+Wire Wire Line
+	4600 1525 4975 1525
+Wire Wire Line
+	6175 1925 6800 1925
+Wire Wire Line
+	6800 1925 6800 2525
+$Comp
+L brunnen:C_Small C?
+U 1 1 5CBD3578
+P 4975 2250
+F 0 "C?" H 5067 2296 50  0000 L CNN
+F 1 "10nF" H 5067 2205 50  0000 L CNN
+F 2 "" H 4975 2250 50  0001 C CNN
+F 3 "" H 4975 2250 50  0001 C CNN
+	1    4975 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4975 2150 4975 1925
+Connection ~ 4975 1925
+Wire Wire Line
+	4975 2350 4975 2525
+Wire Wire Line
+	4975 2525 6250 2525
+$Comp
+L brunnen:C_Small C?
+U 1 1 5CBD5C12
+P 6375 1825
+F 0 "C?" V 6146 1825 50  0000 C CNN
+F 1 "22nF" V 6237 1825 50  0000 C CNN
+F 2 "" H 6375 1825 50  0001 C CNN
+F 3 "" H 6375 1825 50  0001 C CNN
+	1    6375 1825
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6175 1825 6275 1825
+Wire Wire Line
+	5325 1825 5175 1825
+Wire Wire Line
+	5175 1825 5175 1525
+Wire Wire Line
+	5175 1525 6550 1525
+Wire Wire Line
+	6550 1525 6550 1825
+Wire Wire Line
+	6550 1825 6475 1825
+$Comp
+L pspice:INDUCTOR L?
+U 1 1 5CBD9E5C
+P 6900 1525
+F 0 "L?" H 6900 1740 50  0000 C CNN
+F 1 "4,7uH" H 6900 1649 50  0000 C CNN
+F 2 "" H 6900 1525 50  0001 C CNN
+F 3 "~" H 6900 1525 50  0001 C CNN
+	1    6900 1525
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 1525 6650 1525
+Connection ~ 6550 1525
+$Comp
+L brunnen:C_Small C?
+U 1 1 5CBDB68C
+P 7225 2350
+F 0 "C?" H 7317 2396 50  0000 L CNN
+F 1 "220uF" H 7317 2305 50  0000 L CNN
+F 2 "" H 7225 2350 50  0001 C CNN
+F 3 "" H 7225 2350 50  0001 C CNN
+	1    7225 2350
+	1    0    0    -1  
+$EndComp
+Connection ~ 6800 2525
+$Comp
+L brunnen:R R?
+U 1 1 5CBDE94D
+P 6475 2025
+F 0 "R?" V 6400 2025 50  0000 C CNN
+F 1 "150K" V 6550 2025 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" V 6405 2025 50  0001 C CNN
+F 3 "" H 6475 2025 50  0001 C CNN
+	1    6475 2025
+	0    1    1    0   
+$EndComp
+$Comp
+L brunnen:R R?
+U 1 1 5CBDEB22
+P 6250 2275
+F 0 "R?" V 6175 2275 50  0000 C CNN
+F 1 "28,7K" V 6325 2275 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" V 6180 2275 50  0001 C CNN
+F 3 "" H 6250 2275 50  0001 C CNN
+	1    6250 2275
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6175 2025 6250 2025
+Wire Wire Line
+	6250 2125 6250 2025
+Connection ~ 6250 2025
+Wire Wire Line
+	6250 2025 6325 2025
+Wire Wire Line
+	6250 2425 6250 2525
+Connection ~ 6250 2525
+Wire Wire Line
+	6250 2525 6800 2525
+Wire Wire Line
+	7225 2525 6800 2525
+Wire Wire Line
+	7150 1525 7225 1525
+Wire Wire Line
+	7225 1525 7225 2025
+Wire Wire Line
+	6625 2025 7225 2025
+Wire Wire Line
+	7475 1525 7225 1525
+Connection ~ 7475 1525
+Connection ~ 7225 1525
+Wire Wire Line
+	7225 2025 7225 2250
+Connection ~ 7225 2025
+Wire Wire Line
+	7225 2525 7225 2450
+Wire Wire Line
+	4600 2525 4600 2825
+Wire Wire Line
+	4600 2825 5150 2825
+Wire Wire Line
+	4600 2525 4975 2525
+Connection ~ 4975 2525
+$EndSCHEMATC

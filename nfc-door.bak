@@ -30,7 +30,7 @@ LIBS:contrib
 LIBS:valves
 LIBS:marelab
 LIBS:nfc-door-cache
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -45,7 +45,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L nfc-door-rescue:R-brunnen R6
+L brunnen:R R6
 U 1 1 5C842947
 P 4325 1475
 F 0 "R6" V 4325 1475 50  0000 C CNN
@@ -69,7 +69,7 @@ F 3 "~" H 8875 1675 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L nfc-door-rescue:GND-brunnen #PWR020
+L brunnen:GND #PWR020
 U 1 1 5C844D7D
 P 9325 2225
 F 0 "#PWR020" H 9325 1975 50  0001 C CNN
@@ -91,7 +91,7 @@ F 3 "~" H 3450 1275 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L nfc-door-rescue:R-brunnen R7
+L brunnen:R R7
 U 1 1 5C846745
 P 7750 2075
 F 0 "R7" V 7750 2075 50  0000 C CNN
@@ -147,7 +147,7 @@ $EndComp
 Text Notes 9200 5475 0    50   ~ 0
 has 5V D0/D1 Datalines\n
 $Comp
-L nfc-door-rescue:R-brunnen R8
+L brunnen:R R8
 U 1 1 5CB2DFEC
 P 7600 3275
 F 0 "R8" V 7600 3275 50  0000 C CNN
@@ -158,7 +158,7 @@ F 3 "" H 7600 3275 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L nfc-door-rescue:R-brunnen R9
+L brunnen:R R9
 U 1 1 5CB2E336
 P 7625 3975
 F 0 "R9" V 7625 3975 50  0000 C CNN
@@ -229,7 +229,7 @@ F 4 "BSS138" H 8625 3625 50  0001 C CNN "manf-num"
 	-1   0    0    1   
 $EndComp
 $Comp
-L nfc-door-rescue:R-brunnen R12
+L brunnen:R R12
 U 1 1 5CB3A34B
 P 8725 3275
 F 0 "R12" V 8725 3275 50  0000 C CNN
@@ -240,7 +240,7 @@ F 3 "" H 8725 3275 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L nfc-door-rescue:R-brunnen R13
+L brunnen:R R13
 U 1 1 5CB3A351
 P 8750 3975
 F 0 "R13" V 8750 3975 50  0000 C CNN
@@ -310,7 +310,7 @@ F 3 "" H 7775 4875 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L nfc-door-rescue:GND-brunnen #PWR017
+L brunnen:GND #PWR017
 U 1 1 5CB61941
 P 9300 4875
 F 0 "#PWR017" H 9300 4625 50  0001 C CNN
@@ -550,7 +550,7 @@ Wire Wire Line
 	2425 4775 2800 4775
 Connection ~ 2800 4775
 $Comp
-L nfc-door-rescue:R-brunnen R?
+L brunnen:R R?
 U 1 1 5CC1336C
 P 4000 4775
 AR Path="/5C840BDE/5CC1336C" Ref="R?"  Part="1" 
@@ -563,7 +563,7 @@ F 3 "" H 4000 4775 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L nfc-door-rescue:R-brunnen R?
+L brunnen:R R?
 U 1 1 5CC13373
 P 4000 4375
 AR Path="/5C840BDE/5CC13373" Ref="R?"  Part="1" 
@@ -585,7 +585,7 @@ AR Path="/5C840BDE/5CC1337B" Ref="D?"  Part="1"
 AR Path="/5CC1337B" Ref="D4"  Part="1" 
 F 0 "D4" H 3550 4500 50  0000 C CNN
 F 1 "LED" H 3575 4250 50  0000 C CNN
-F 2 "LEDs:LED_PLCC-2" H 3575 4375 50  0001 C CNN
+F 2 "LEDs:LED_0805" H 3575 4375 50  0001 C CNN
 F 3 "~" H 3575 4375 50  0001 C CNN
 	1    3575 4375
 	1    0    0    1   
@@ -636,7 +636,7 @@ Wire Wire Line
 Wire Wire Line
 	3775 4975 3775 5050
 $Comp
-L nfc-door-rescue:R-brunnen R?
+L brunnen:R R?
 U 1 1 5CC1339A
 P 2425 4425
 AR Path="/5C840BDE/5CC1339A" Ref="R?"  Part="1" 
@@ -739,7 +739,7 @@ Wire Wire Line
 Wire Wire Line
 	5875 6150 5875 6750
 $Comp
-L nfc-door-rescue:C_Small-brunnen C?
+L brunnen:C_Small C?
 U 1 1 5CC133E2
 P 4050 6475
 AR Path="/5C840BDE/5CC133E2" Ref="C?"  Part="1" 
@@ -760,7 +760,7 @@ Wire Wire Line
 Wire Wire Line
 	4050 6750 5325 6750
 $Comp
-L nfc-door-rescue:C_Small-brunnen C?
+L brunnen:C_Small C?
 U 1 1 5CC133ED
 P 5450 6050
 AR Path="/5C840BDE/5CC133ED" Ref="C?"  Part="1" 
@@ -803,7 +803,7 @@ Wire Wire Line
 	5625 5750 5725 5750
 Connection ~ 5625 5750
 $Comp
-L nfc-door-rescue:C_Small-brunnen C?
+L brunnen:C_Small C?
 U 1 1 5CC13403
 P 6300 6575
 AR Path="/5C840BDE/5CC13403" Ref="C?"  Part="1" 
@@ -818,7 +818,7 @@ F 4 "CC0805JRX7R8BB223" H 6300 6575 50  0001 C CNN "manf-num"
 $EndComp
 Connection ~ 5875 6750
 $Comp
-L nfc-door-rescue:R-brunnen R?
+L brunnen:R R?
 U 1 1 5CC1340B
 P 5550 6250
 AR Path="/5C840BDE/5CC1340B" Ref="R?"  Part="1" 
@@ -831,7 +831,7 @@ F 3 "" H 5550 6250 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L nfc-door-rescue:R-brunnen R?
+L brunnen:R R?
 U 1 1 5CC13412
 P 5325 6500
 AR Path="/5C840BDE/5CC13412" Ref="R?"  Part="1" 
@@ -1082,7 +1082,7 @@ F 3 "" H 4425 7050 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L nfc-door-rescue:ESP-12E-ESP8266 U4
+L ESP8266:ESP-12E U4
 U 1 1 5D2A3C21
 P 6425 1575
 F 0 "U4" H 6425 2340 50  0000 C CNN
@@ -1115,7 +1115,7 @@ F 3 "" H 3900 850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L nfc-door-rescue:C_Small-brunnen C?
+L brunnen:C_Small C?
 U 1 1 5D4B1B92
 P 3450 1625
 AR Path="/5C840BDE/5D4B1B92" Ref="C?"  Part="1" 
@@ -1181,7 +1181,7 @@ Wire Wire Line
 Wire Wire Line
 	4700 2375 4825 2375
 $Comp
-L nfc-door-rescue:R-brunnen R11
+L brunnen:R R11
 U 1 1 5CCA9B4D
 P 4825 2575
 F 0 "R11" V 4825 2575 50  0000 C CNN
@@ -1211,7 +1211,7 @@ Wire Wire Line
 Wire Wire Line
 	7750 1925 7750 1875
 $Comp
-L nfc-door-rescue:R-brunnen R15
+L brunnen:R R15
 U 1 1 5CCF30A3
 P 8025 2075
 F 0 "R15" V 8025 2075 50  0000 C CNN
@@ -1273,7 +1273,7 @@ Wire Wire Line
 Wire Wire Line
 	8025 1575 8025 1675
 $Comp
-L nfc-door-rescue:R-brunnen R10
+L brunnen:R R10
 U 1 1 5CE27726
 P 3900 1025
 F 0 "R10" V 3900 1025 50  0000 C CNN
@@ -1299,7 +1299,7 @@ GPIO2
 Wire Wire Line
 	7325 1775 7875 1775
 $Comp
-L nfc-door-rescue:R-brunnen R14
+L brunnen:R R14
 U 1 1 5CE65122
 P 4675 700
 F 0 "R14" V 4675 700 50  0000 C CNN
@@ -1320,7 +1320,7 @@ Connection ~ 7875 1775
 Wire Wire Line
 	7875 1775 8275 1775
 $Comp
-L nfc-door-rescue:GND-brunnen #PWR023
+L brunnen:GND #PWR023
 U 1 1 5CEA2985
 P 8350 1050
 F 0 "#PWR023" H 8350 800 50  0001 C CNN
@@ -1349,7 +1349,7 @@ Wire Wire Line
 	4825 1875 4825 2375
 Connection ~ 4825 2375
 $Comp
-L nfc-door-rescue:R-brunnen R16
+L brunnen:R R16
 U 1 1 5CF3AAFF
 P 4325 1575
 F 0 "R16" V 4325 1575 50  0000 C CNN
@@ -1394,7 +1394,7 @@ BUZZER
 Text GLabel 9550 4300 2    50   Input ~ 0
 BUZZER
 $Comp
-L nfc-door-rescue:R-brunnen R18
+L brunnen:R R18
 U 1 1 5CF7D19A
 P 9325 4300
 F 0 "R18" V 9325 4300 50  0000 C CNN
@@ -1455,7 +1455,7 @@ Wire Wire Line
 Wire Wire Line
 	4750 2250 4475 2250
 $Comp
-L nfc-door-rescue:R-brunnen R17
+L brunnen:R R17
 U 1 1 5D06E0FF
 P 4850 1675
 F 0 "R17" V 4850 1675 50  0000 C CNN

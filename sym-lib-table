@@ -24,5 +24,7 @@
   (lib (name atmel)(type Legacy)(uri ${KICAD_SYMBOL_DIR}/atmel.lib)(options "")(descr ""))
   (lib (name contrib)(type Legacy)(uri ${KICAD_SYMBOL_DIR}/contrib.lib)(options "")(descr ""))
   (lib (name valves)(type Legacy)(uri ${KICAD_SYMBOL_DIR}/valves.lib)(options "")(descr ""))
-  (lib (name marelab)(type Legacy)(uri //Ls-wxl6bf/server/GITHUB/KiCadLibs/marelab.pretty/marelab.lib)(options "")(descr ""))
+  (lib (name marelab)(type Legacy)(uri Z:/GITHUB/KiCadLibs/marelab/prettymarelab.lib)(options "")(descr ""))
+  (lib (name CHINA_PARTS)(type Legacy)(uri Z:/GITHUB/KiCadLibs/CHINA_PARTS.lib)(options "")(descr ""))
+  (lib (name RESCUE)(type Legacy)(uri Z:/GITHUB/nfc-door/rescue-backup/nfc-door-rescue-2019-03-08-12-15-37.lib)(options "")(descr ""))
 )

@@ -1,0 +1,61 @@
+Reference, Value, Footprint, Datasheet, manf-num
+R6,10K,Resistors_SMD:R_0805,
+JP5,FLASH/UPLOAD,Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm,~
+JP4,RESET,Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm,~
+R7,10K,Resistors_SMD:R_0805,
+Q1,BSS138,TO_SOT_Packages_SMD:SOT-23,https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf,BSS138
+R8,10K,Resistors_SMD:R_0805,
+R9,10K,Resistors_SMD:R_0805,
+Q2,BSS138,TO_SOT_Packages_SMD:SOT-23,https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf,BSS138
+R12,10K,Resistors_SMD:R_0805,
+R13,10K,Resistors_SMD:R_0805,
+J1,12V AC,marelab:RM3.5-CON,~
+J2,DOOR 12V OUT,marelab:RM3.5-CON,~
+C1,470uF/25V,Capacitors_ThroughHole:CP_Radial_D10.0mm_P5.00mm,https://www.mouser.de/datasheet/2/212/KEM_A4074_ESL-1128319.pdf,ESL477M025AH9
+JP1,DC-B,marelab:SolderBridge,~
+JP2,DC-B,marelab:SolderBridge,~
+TP2,TestPoint 5V,Wire_Pads:SolderWirePad_single_0-8mmDrill,~
+TP1,TestPoint 3,3V,Wire_Pads:SolderWirePad_single_0-8mmDrill,~
+U1,TLP3544,Housings_DIP:DIP-6_W7.62mm_LongPads,https://toshiba.semicon-storage.com/info/docget.jsp?did=12661&prodName=TLP3544,TLP3544(F)
+R3,220R,Resistors_SMD:R_1206,
+R2,220R,Resistors_SMD:R_1206,
+D4,LED,LEDs:LED_0805,~
+R1,4R,Resistors_SMD:R_2512_HandSoldering,https://www.mouser.de/ProductDetail/TE-Connectivity-Neohm/CRGH2512J3R3?qs=sGAEpiMZZMtlubZbdhIBIJxdTG9Lhrplco3j2ct9aIo%3D
+C2,470uF/25V,Capacitors_ThroughHole:CP_Radial_D10.0mm_P5.00mm,https://www.mouser.de/datasheet/2/212/KEM_A4074_ESL-1128319.pdf,ESL477M025AH9
+U3,ACT4088,TO_SOT_Packages_SMD:SOT-23-6,,ACT4088US-T
+C3,10nF,Capacitors_SMD:C_0805,,CC0805KRX7R8BB103
+C5,22nF,Capacitors_SMD:C_0805,,CC0805JRX7R8BB223
+L1,4,7uH,Inductors:Inductor_Taiyo-Yuden_NR-40xx_HandSoldering,SRN4026-4R7M,SRN4026-4R7M
+C6,22-220uf 10V LOW RES ,Capacitors_SMD:C_1206,,CC0805JRX7R8BB223
+R5,150K,Resistors_SMD:R_1206,
+R4,28,7K,Resistors_SMD:R_1206,
+D2, 40V 2A ,Diodes_SMD:D_1206,https://www.mouser.de/ProductDetail/AVX/SD1206T040S2R0?qs=sGAEpiMZZMtQ8nqTKtFS%2FB%252BvZQIExTNLMONDSxGkijM%3D,SD1206T040S2R0
+D5,B240AE-13,Diodes_SMD:D_SMA_Handsoldering,https://www.mouser.de/datasheet/2/115/B220AEBE-B245AEBE-1115122.pdf,B240AE-13
+D3,B240AE-13,Diodes_SMD:D_SMA_Handsoldering,https://www.mouser.de/datasheet/2/115/B220AEBE-B245AEBE-1115122.pdf,B240AE-13
+JP3,CUR-LIM,marelab:SolderBridge,~
+F1,Polyfuse_Small,Fuse_Holders_and_Fuses:Fuse_SMD2920,https://www.mouser.de/ProductDetail/Bel-Fuse/0ZCF0200AF2C?qs=sGAEpiMZZMsxR%252BBXi4wRUHZtKAyWcVPAonHgfZAwZ0w4uRm2w8%252B8Yg%3D%3D,0ZCF0200AF2C
+J4, ,marelab:RM3.5-CON,~
+J6, ,marelab:RM3.5-CON,~
+J7, ,marelab:RM3.5-CON,~
+U2,LM1117-3,3V,Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm,
+U4,ESP-12E,ESP:ESP-12E_SMD,http://l0l.org.uk/2014/12/esp8266-modules-hardware-guide-gotta-catch-em-all/
+C4,100nF,Capacitors_SMD:C_0805,https://www.mouser.de/ProductDetail/Murata-Electronics/GCM21BR70J106KE22L?qs=sGAEpiMZZMs0AnBnWHyRQAqZuYDIKiCD4R8yqp0K1N0%3D,CC0805KPX7R8BB104
+R11,10K,Resistors_SMD:R_0805,
+R15,10K,Resistors_SMD:R_0805,
+R10,10K,Resistors_SMD:R_0805,
+R14,10K,Resistors_SMD:R_0805,
+J5, ,marelab:RM3.5-CON,~
+R16,10K,Resistors_SMD:R_0805,
+J10,SEL_BUZ,Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm,~
+R18,10K,Resistors_SMD:R_0805,
+J8, ,marelab:RM3.5-CON,~
+R17,10K,Resistors_SMD:R_0805,
+J3,TX/RX,Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm,~
+H1,MountingHole,Mounting_Holes:MountingHole_2.5mm_Pad,~
+H2,MountingHole,Mounting_Holes:MountingHole_2.5mm_Pad,~
+H3,MountingHole,Mounting_Holes:MountingHole_2.5mm_Pad,~
+H4,MountingHole,Mounting_Holes:MountingHole_2.5mm_Pad,~
+D1,B125C2300-1500B,Diodes_ThroughHole:Diode_Bridge_Round_D8.9mm,https://diotec.com/tl_files/diotec/files/pdf/datasheets/b40c2300.pdf
+JP6,EXT-LED,Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm,~
+JP7,D03,3,marelab:SolderBridge,~
+JP8,D13,3,marelab:SolderBridge,~

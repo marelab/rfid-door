@@ -1,0 +1,34 @@
+Pos;Description;Part;Name;Wert;Footprint;Quantity Per PCB;Datasheet;manf-num
+1;;C_Small;C4;100nF;C_0805;1;https://www.mouser.de/ProductDetail/Murata-Electronics/GCM21BR70J106KE22L?qs=sGAEpiMZZMs0AnBnWHyRQAqZuYDIKiCD4R8yqp0K1N0%3D;CC0805KPX7R8BB104
+2;;C_Small;C3;10nF;C_0805;1;;CC0805KRX7R8BB103
+3;;C_Small;C6;22-220uf 10V LOW RES ;C_1206;1;;CC0805JRX7R8BB223
+4;;C_Small;C5;22nF;C_0805;1;;CC0805JRX7R8BB223
+5;Polarized capacitor;CP;C1 C2;470uF/25V;CP_Radial_D10.0mm_P5.00mm;2;https://www.mouser.de/datasheet/2/212/KEM_A4074_ESL-1128319.pdf;ESL477M025AH9
+6;Diode symbol for simulation only. Pin order incompatible with official kicad footprints;DIODE;D2; 40V 2A ;D_1206;1;https://www.mouser.de/ProductDetail/AVX/SD1206T040S2R0?qs=sGAEpiMZZMtQ8nqTKtFS%2FB%252BvZQIExTNLMONDSxGkijM%3D;SD1206T040S2R0
+7;Silicon Bridge Rectifier, 125V Vrms, 1.5A If, pins=-A+A, SIL-package;B125C2300-1500B;D1;B125C2300-1500B;Diode_Bridge_Round_D8.9mm;1;https://diotec.com/tl_files/diotec/files/pdf/datasheets/b40c2300.pdf;
+8;Diode;D;D3 D5;B240AE-13;D_SMA_Handsoldering;2;https://www.mouser.de/datasheet/2/115/B220AEBE-B245AEBE-1115122.pdf;B240AE-13
+9;Light emitting diode;LED;D4;LED;LED_0805;1;~;
+10;Resettable fuse, polymeric positive temperature coefficient, small symbol;Polyfuse_Small;F1;Polyfuse_Small;Fuse_SMD2920;1;https://www.mouser.de/ProductDetail/Bel-Fuse/0ZCF0200AF2C?qs=sGAEpiMZZMsxR%252BBXi4wRUHZtKAyWcVPAonHgfZAwZ0w4uRm2w8%252B8Yg%3D%3D;0ZCF0200AF2C
+11;Generic screw terminal, single row, 01x02;Screw_Terminal_01x02;J4 J5 J6 J7 J8;;RM3.5-CON;5;~;
+12;Generic screw terminal, single row, 01x02;Screw_Terminal_01x02;J1;12V AC;RM3.5-CON;1;~;
+13;Generic screw terminal, single row, 01x02;Screw_Terminal_01x02;J2;DOOR 12V OUT;RM3.5-CON;1;~;
+14;Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/);Conn_01x03_Male;J10;SEL_BUZ;Pin_Header_Straight_1x03_Pitch2.54mm;1;~;
+15;Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/);Conn_01x04_Female;J3;TX/RX;Pin_Header_Straight_1x04_Pitch2.54mm;1;~;
+16;Jumper, normally closed;Jumper;JP3;CUR-LIM;SolderBridge;1;~;
+17;Jumper, normally closed;Jumper;JP7;D03,3;SolderBridge;1;~;
+18;Jumper, normally closed;Jumper;JP8;D13,3;SolderBridge;1;~;
+19;Jumper, normally closed;Jumper;JP1 JP2;DC-B;SolderBridge;2;~;
+20;Jumper, normally closed;Jumper;JP6;EXT-LED;Pin_Header_Straight_1x02_Pitch2.54mm;1;~;
+21;Jumper, normally closed;Jumper;JP5;FLASH/UPLOAD;Pin_Header_Straight_1x02_Pitch2.54mm;1;~;
+22;Jumper, normally closed;Jumper;JP4;RESET;Pin_Header_Straight_1x02_Pitch2.54mm;1;~;
+23;Capacitor symbol for simulation only;INDUCTOR;L1;4,7uH;Inductor_Taiyo-Yuden_NR-40xx_HandSoldering;1;SRN4026-4R7M;SRN4026-4R7M
+24;50V Vds, 0.22A Id, N-channel MOSFET, SOT-23;BSS138;Q1 Q2;BSS138;SOT-23;2;https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf;BSS138
+25;;R;R6 R7 R8 R9 R10 R11 R12 R13 R14 R15 R16 R17 R18;10K;R_0805;13;;
+26;;R;R5;150K;R_1206;1;;
+27;;R;R2 R3;220R;R_1206;2;;
+28;;R;R4;28,7K;R_1206;1;;
+29;;R;R1;4R;R_2512_HandSoldering;1;https://www.mouser.de/ProductDetail/TE-Connectivity-Neohm/CRGH2512J3R3?qs=sGAEpiMZZMtlubZbdhIBIJxdTG9Lhrplco3j2ct9aIo%3D;
+30;5V StepDown Wandler;ACT4088;U3;ACT4088;SOT-23-6;1;;ACT4088US-T
+31;ESP8266 ESP-12E module, 22 pins, 2mm, PCB antenna;ESP-12E;U4;ESP-12E;ESP-12E_SMD;1;http://l0l.org.uk/2014/12/esp8266-modules-hardware-guide-gotta-catch-em-all/;
+32;3,3V 1.5A CHINA MODUL;LM1117-3,3V;U2;LM1117-3,3V;Pin_Header_Straight_1x03_Pitch2.54mm;1;;
+33;Photo MOSFET optically coupled, ON 3.5A, 60mohm, OFF state 40V, Isolation 2500 VRMS, DIP-6;TLP3544;U1;TLP3544;DIP-6_W7.62mm_LongPads;1;https://toshiba.semicon-storage.com/info/docget.jsp?did=12661&prodName=TLP3544;TLP3544(F)

@@ -52,9 +52,8 @@ Just for details about german standard and regulations for the bell transformer 
 ## Getting Started
 This project still in its development phase. New features (and also bugs) are introduced often and some functions may become deprecated. Please feel free to comment or give feedback.
 
-* [See Demo Here](https://bitadvise.com/esp-rfid/)
-* Get the latest release from [here.](https://github.com/esprfid/esp-rfid/releases)
-* See [Known Issues](https://github.com/esprfid/esp-rfid#known-issues) before starting right away.
+* Get the latest release from [here.](https://github.com/marelab/nfc-doo/releases)
+* Building the hardware [here] (https://github.com/marelab/nfc-door#Building the hardware)
 * See [Security](https://github.com/esprfid/esp-rfid#security) for your safety.
 * See [ChangeLog](https://github.com/esprfid/esp-rfid/blob/dev/CHANGELOG.md)
 
@@ -66,6 +65,10 @@ or
 * A MFRC522 RFID PCD Module or PN532 NFC Reader Module or RDM6300 125KHz RFID Module Wiegand based RFID reader
 * A Relay Module (or you can build your own circuit)
 * n quantity of Mifare Classic 1KB (recommended due to available code base) PICCs (RFID Tags) equivalent to User Number
+
+#### Building the hardware
+The ACT4088 Step Down is a quite tiny part and its quite inpossibel to indetify Pin1 without a mircoscope or strong lense. As hint thats a picture of the ACT4088 to find Pin1 as marked in the image.
+![Showcase Gif](https://github.com/marelab/nfc-door/blob/master/grafics/act4088_oriantation.png)
 
 ### Software
 

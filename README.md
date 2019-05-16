@@ -67,7 +67,10 @@ or
 * n quantity of Mifare Classic 1KB (recommended due to available code base) PICCs (RFID Tags) equivalent to User Number
 
 ## **Building** 
-Be carefull with 12V AC Ring bell transformers. The DC Voltage after the Diode bridge can be around 18V DC!!! That will not kill the NFC-DOOR hardware but it will kill a 12V RFID Reader that is connected to the NFC-DOOR. Why is that happening most Readers have a build in AMS1117 Voltage regulator wich has a maximum 16V input. The NFC-DOOR transforms the AC input Voltage in three stages first Stage is a diode bridge to transform AC to rippled DC then a Step Down Regulator generates 5V DC that can handle 24V DC input next the 5V is converted to 3,3V with a AMS1117 for the ESP. The NFC-DOOR won't get killed because the AMS1117 lives behind the 5V StepDown stage. The Rippled DC is connected directly to the power reader connectors. The easiest way to get around that problem is using a 8V AC Ringbell transformer. The rippled DC after the Diode Bridge is around 14-15V and in the range a AMS1117 of the Reader can handle.
+Be carefull with 12V AC Ring bell transformers. The DC Voltage after the Diode bridge can be around 18V DC!!! That will not kill the NFC-DOOR hardware but it will kill a 12V RFID Reader that is connected to the NFC-DOOR. Why is that happening most Readers have a build in AMS1117 Voltage regulator wich has a maximum 16V input. The NFC-DOOR transforms the AC input Voltage in three stages first Stage is a diode bridge to transform AC to rippled DC then a Step Down Regulator generates 5V DC that can handle 24V DC input next the 5V is converted to 3,3V with a AMS1117 for the ESP. The NFC-DOOR won't get killed because the AMS1117 lives behind the 5V StepDown stage. The Rippled DC is connected directly to the power reader connectors. 
+The easiest way to get around that problem is using a 8V AC Ringbell transformer. For example someting like this:
+![Showcase Gif](https://github.com/marelab/nfc-door/blob/master/grafics/klingeltrafo.jpg)
+Just use the 8V instead of 12V. The rippled DC after the Diode Bridge is around 14-15V and in the range a AMS1117 of the Reader can handle.
 
 
 

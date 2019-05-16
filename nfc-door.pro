@@ -1,4 +1,4 @@
-update=13.05.2019 18:47:52
+update=16.05.2019 11:11:42
 version=1
 last_client=kicad
 [pcbnew]
@@ -63,7 +63,7 @@ LibName31=marelab
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
-PlotDirectoryName=
+PlotDirectoryName=grafics/
 SubpartIdSeparator=0
 SubpartFirstId=65
 NetFmtName=Pcbnew

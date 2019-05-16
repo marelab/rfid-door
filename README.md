@@ -53,7 +53,7 @@ Just for details about german standard and regulations for the bell transformer 
 This project still in its development phase. New features (and also bugs) are introduced often and some functions may become deprecated. Please feel free to comment or give feedback.
 
 * Get the latest release from [here.](https://github.com/marelab/nfc-doo/releases)
-* Building the hardware [here] (https://github.com/marelab/nfc-door#Building the hardware)
+* Building the hardware [here](https://github.com/marelab/nfc-door#Building)
 * See [Security](https://github.com/esprfid/esp-rfid#security) for your safety.
 * See [ChangeLog](https://github.com/esprfid/esp-rfid/blob/dev/CHANGELOG.md)
 

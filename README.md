@@ -13,7 +13,7 @@ The marelab NFC-DOOR hardware:
 ```
 * Can be powered by AC RingBell transformer directly no seperate power source need at the installation spot
 * No mechanical Relais just Silicon Door coil is driven by smal opto mosfet
-* Current start limitation of the door coil to save the mosfet and IC during current breakdown when the door coil get activated  
+* Currentlimitation of the door coil to limit the current breakdown while magentic lock is activated  
 * 5V kompatible Wiegand DO/D1 Lines as default
 ```
 
@@ -46,16 +46,11 @@ The marelab NFC-DOOR hardware:
 * Fits in an universal enclosures with DIN mount
 * Open Source Hardware
 
+
 ## Getting Started
 New features (and also bugs) are introduced often and some functions may become deprecated. Please feel free to comment or give feedback.
 
-* Get the latest hardware release from [here.](https://github.com/marelab/nfc-door/releases)
-* Get the firmware software from [here.](https://github.com/marelab/esp-rfid/releases)
-* See Building [Building](https://github.com/marelab/nfc-door#building)
-* See [Security](https://github.com/marelab/esp-rfid#security) for your safety.
-* See [ChangeLog](https://github.com/marelab/esp-rfid/blob/dev/CHANGELOG.md)
-
-### What You Will Need
+### Hardware you need
 ### Hardware
 * [marelab NFC-DOOR Board](https://www.marelab.org/index.php/smarthome-iot/nfc-door) can be ordered here
 * A MFRC522 RFID PCD Module or PN532 NFC Reader Module or RDM6300 125KHz RFID Module Wiegand based RFID reader
@@ -63,7 +58,32 @@ New features (and also bugs) are introduced often and some functions may become 
 * A door Relay 8-12V
 * A Ringbell Transformer 8-12V 
 
-## **Building** 
+### Software you need
+* Get the latest hardware release from [here.](https://github.com/marelab/nfc-door/releases)
+* Get the firmware software from [here.](https://github.com/marelab/esp-rfid/releases)
+* See Building [Building](https://github.com/marelab/nfc-door#building)
+* See [Security](https://github.com/marelab/esp-rfid#security) for your safety.
+* See [ChangeLog](https://github.com/marelab/esp-rfid/blob/dev/CHANGELOG.md)
+
+### Setuo & get it running 
+* First, flash firmware (you can use /bin/flash.bat on Windows) to your ESP either using Arduino IDE or with your favourite flash tool
+* (optional) Fire up your serial monitor to get informed
+* Search for Wireless Network "esp-rfid-xxxxxx" and connect to it (It should be an open network and does not require password)
+* Open your browser and type either "http://192.168.4.1" or "http://esp-rfid.local" (.local needs Bonjour installed on your computer) on address bar.
+* Log on to ESP, default password is "admin"
+* Go to "Settings" page
+* Configure your amazing access control device. Push "Scan" button to join your wireless network, configure RFID hardware, Relay Module.
+* Save settings, when rebooted your ESP will try to join your wireless network.
+* Check your new IP address from serial monitor and connect to your ESP again. (You can also connect to "http://esp-rfid.local")
+* Go to "Users" page
+* Scan a PICC (RFID Tag) then it should glimpse on your Browser's screen.
+* Type "User Name" or "Label" for the PICC you scanned.
+* Choose "Allow Access" if you want to
+* Click "Add"
+* Congratulations, everything went well, if you encounter any issue feel free to ask help on GitHub.
+
+
+## **Building** & Setuo Hardware
 #### The AC Ring Bell Transformer
 Be carefull with 12V AC Ring bell transformers. The DC Voltage after the Diode bridge can be around 18V DC!!! That will not kill the NFC-DOOR hardware but it will kill a 12V RFID Reader that is connected to the NFC-DOOR. Why is that happening most Readers have a build in AMS1117 Voltage regulator wich has a maximum 16V input. The NFC-DOOR transforms the AC input Voltage in three stages first Stage is a diode bridge to transform AC to rippled DC then a Step Down Regulator generates 5V DC that can handle 24V DC input next the 5V is converted to 3,3V with a AMS1117 for the ESP. The NFC-DOOR won't get killed because the AMS1117 lives behind the 5V StepDown stage. The Rippled DC is connected directly to the power reader connectors. 
 The easiest way to get around that problem is using a 8V AC Ringbell transformer. For example someting like this:
@@ -172,23 +192,6 @@ What can be done to increase security? (by you and by us)
 * We are working on more secure ways to Authenticate RFID Tags.
 * You can disable wireless network to reduce attack surface. (This can be configured in Web UI Settings page)
 * Choose a strong password for the Web UI
-
-## Setuo & get it running 
-* First, flash firmware (you can use /bin/flash.bat on Windows) to your ESP either using Arduino IDE or with your favourite flash tool
-* (optional) Fire up your serial monitor to get informed
-* Search for Wireless Network "esp-rfid-xxxxxx" and connect to it (It should be an open network and does not require password)
-* Open your browser and type either "http://192.168.4.1" or "http://esp-rfid.local" (.local needs Bonjour installed on your computer) on address bar.
-* Log on to ESP, default password is "admin"
-* Go to "Settings" page
-* Configure your amazing access control device. Push "Scan" button to join your wireless network, configure RFID hardware, Relay Module.
-* Save settings, when rebooted your ESP will try to join your wireless network.
-* Check your new IP address from serial monitor and connect to your ESP again. (You can also connect to "http://esp-rfid.local")
-* Go to "Users" page
-* Scan a PICC (RFID Tag) then it should glimpse on your Browser's screen.
-* Type "User Name" or "Label" for the PICC you scanned.
-* Choose "Allow Access" if you want to
-* Click "Add"
-* Congratulations, everything went well, if you encounter any issue feel free to ask help on GitHub.
 
 ## Scalability
 Since we are limited on both flash and ram size things may get ugly at some point in the future. You can find out some test results below.

@@ -10,11 +10,12 @@ NFC/RFID WIFI Access Control hardware interfacing a cheap MFRC522, PN532 RFID, R
 
 ## Differnces of the ESP-RFID Hardware to NFC-DOOR Hardware
 The marelab NFC-DOOR hardware: 
+```
 * Can be powered by AC RingBell transformer directly no seperate power source need at the installation spot
 * No mechanical Relais just Silicon Door coil is driven by smal opto mosfet
 * Current start limitation of the door coil to save the mosfet and IC during current breakdown when the door coil get activated  
 * 5V kompatible Wiegand DO/D1 Lines as default
-
+```
 
 ## Features
 ### For Users
@@ -27,22 +28,21 @@ The marelab NFC-DOOR hardware:
 * Using WebSocket protocol to exchange data between Hardware and Web Browser
 * Data is encoded as JSON object
 * Records are Timestamped (Time synced from a NTP Server)
-* MQTT enabled
+* MQTT enabled for using by Smart Home automatisation.
 * Bootstrap, jQuery, FooTables for beautiful Web Pages for both Mobile and Desktop Screens
 * Thanks to ESPAsyncWebServer Library communication is Asynchronous
 ### Official Hardware
-* Small size form factor, sometimes it is possible to glue it into existing readers.
-* Single power source to power 12V/2A powers ESP12 module, RFID Wiegand Reader and magnetic lock for opening doors.
+* Small size form factor just 4,5cm * 4,5 cm
+* Single power source (Ring Bell transformer) for NFC-DOOR hardware & RFID Wiegand Reader and magnetic lock for opening doors.
 * Exposed programming pins for ESP8266
 * Regarding hardware design, you get multiple possible setup options:
 * Forward Bell ringing on reader to MCU or pass it out of board
-* Track Door Status
 * Control reader’s status LED
 * Control reader’s status BUZZER sound *
-* Power reader, lock and the board through single 12V, 2A PSU
-* Optionally power magnetic lock through external AC/DC PSU
+* Power reader, lock and the board through single 8V, AC Ring Bell Transformer
+* Power for Magnetic Lock / Door Relais is supplied by NFC-DOOR Hardware
 * Possible to use any kind and any type of Wiegand readers
-* Enables you to make IOT Access System with very little wiring
+* Smart Home integration over MQTT
 * Fits in an universal enclosures with DIN mount
 * Open Source Hardware
 
@@ -74,6 +74,9 @@ Just for details about german standard and regulations for the bell transformer 
 ####  Placing the ACT4088 IC
 The ACT4088 Step Down is a quite tiny part and its quite inpossible to indetify Pin1 without a mircoscope or strong lense. As hint thats a picture of the ACT4088 to find Pin1 as marked in the image.
 ![Showcase Gif](https://github.com/marelab/nfc-door/blob/master/grafics/act4088_oriantation.png)
+
+#### Encloser cad screw drwaing
+CAD Zeichnung für Bohrungen im gehäuse 
 
 #### Special Configuration solder bridges
 Description of the Solder Bridges
@@ -139,7 +142,6 @@ In order to test your changes without flashing the firmware you can launch webso
 
 Get more information here: https://stackoverflow.com/questions/3102819/disable-same-origin-policy-in-chrome
 
-
 ### Pin Layout
 
 The following table shows the typical pin layout used for connecting readers hardware to ESP:
@@ -155,7 +157,23 @@ The following table shows the typical pin layout used for connecting readers har
 
 For Wiegand based readers, you can configure D0 and D1 pins via settings page. By default, D0 is GPIO-4 and D1 is GPIO-5
 
-### Steps
+## Time
+We are syncing time from a NTP Server (in Client -aka infrastructure- Mode). This will require ESP to have an Internet connection. Additionally your ESP can also work without Internet connection too (Access Point -aka Ad-Hoc- Mode),  without giving up functionality.
+This will require you to do syncing manually. ESP can store and hold time for you approximately 51 days without a major issue, device time can drift from actual time depending on usage, temperature, etc.
+So you have to login to settings page and sync it in a timely fashion.
+
+## **Security**
+We assume **ESP-RFID** project -as a whole- does not offer strong security. There are PICCs available that their UID (Unique Identification Numbers) can be set manually (Currently esp-rfid relies only UID to identify its users). Also there may be a bug in the code that may result free access to your belongings. And also, like every other network connected device esp-rfid is vulnerable to many attacks including Man-in-the-middle, Brute-force, etc.
+
+This is a simple, hobby grade project, do not use it where strong security is needed.
+
+What can be done to increase security? (by you and by us)
+
+* We are working on more secure ways to Authenticate RFID Tags.
+* You can disable wireless network to reduce attack surface. (This can be configured in Web UI Settings page)
+* Choose a strong password for the Web UI
+
+## Setuo & get it running 
 * First, flash firmware (you can use /bin/flash.bat on Windows) to your ESP either using Arduino IDE or with your favourite flash tool
 * (optional) Fire up your serial monitor to get informed
 * Search for Wireless Network "esp-rfid-xxxxxx" and connect to it (It should be an open network and does not require password)
@@ -171,22 +189,6 @@ For Wiegand based readers, you can configure D0 and D1 pins via settings page. B
 * Choose "Allow Access" if you want to
 * Click "Add"
 * Congratulations, everything went well, if you encounter any issue feel free to ask help on GitHub.
-
-#### Time
-We are syncing time from a NTP Server (in Client -aka infrastructure- Mode). This will require ESP to have an Internet connection. Additionally your ESP can also work without Internet connection too (Access Point -aka Ad-Hoc- Mode),  without giving up functionality.
-This will require you to do syncing manually. ESP can store and hold time for you approximately 51 days without a major issue, device time can drift from actual time depending on usage, temperature, etc.
-So you have to login to settings page and sync it in a timely fashion.
-
-## **Security**
-We assume **ESP-RFID** project -as a whole- does not offer strong security. There are PICCs available that their UID (Unique Identification Numbers) can be set manually (Currently esp-rfid relies only UID to identify its users). Also there may be a bug in the code that may result free access to your belongings. And also, like every other network connected device esp-rfid is vulnerable to many attacks including Man-in-the-middle, Brute-force, etc.
-
-This is a simple, hobby grade project, do not use it where strong security is needed.
-
-What can be done to increase security? (by you and by us)
-
-* We are working on more secure ways to Authenticate RFID Tags.
-* You can disable wireless network to reduce attack surface. (This can be configured in Web UI Settings page)
-* Choose a strong password for the Web UI
 
 ## Scalability
 Since we are limited on both flash and ram size things may get ugly at some point in the future. You can find out some test results below.

@@ -2,7 +2,7 @@
 
 NFC/RFID WIFI Access Control hardware interfacing a cheap MFRC522, PN532 RFID, RDM6300 readers or Wiegand RFID readers with a Espressif's ESP8266 Microcontroller as Wifi Bridge to drive the door open coil to unlock a home door and to include it into a home automatisation system. 
 
-[![Showcase Gif](https://github.com/marelab/nfc-door/blob/master/grafics/nfc-door-V-1-1-3D.png)
+![Showcase Gif](https://github.com/marelab/nfc-door/blob/master/grafics/nfc-door-V-1-1-3D.png)
 
 ## First of all 
 big thanks to the ESP-RFID Project with the work they have done. The "nfc-door" hardware is 100% compatible with their software. Just the hardware design is differnt in my version. The nfc-door pcb is designed to be powered directly from the AC Ring Bell transformer (8-12V AC). But can also be configured to use a 8-12V DC power by just solder bridges. Main reason why I used a different design was the fact that I didn't wanted to setup a new DC source and cables for that device, it can be integrated without any extra power infrastructure. Most german households have a AC Ringbell with 8 or 12V transformer next to the door. 
@@ -48,19 +48,6 @@ Just for details about german standard and regulations for the bell transformer 
 * Enables you to make IOT Access System with very little wiring
 * Fits in an universal enclosures with DIN mount
 * Open Source Hardware
-
-Get more information and see accessory options from [Tindie Store](https://www.tindie.com/products/nardev/esp-rfid-relay-board-12v-in-esp8266-board/)
-
-| What are others saying about esp-rfid? |
-| ---- |
-| _“Hi, nice project.”_ – [@Rotzbua]() |
-| _“Your app works like a charm”_ – [@tueddy ]() |
-| _“Just stumbled upon this project while planning to do something similar. Very beautifully done!”_ – [@LifeP]() |
-| _“Hello, I've come across your project and first of all… wow - thanks to all contributors for your hard work!”_ – [@byt3w4rri0r]() |
-| _“Brilliant work.”_ – [@danbicks]() |
-| _“This is an impressive project.”_ – [@appi1]() |
-| _“I'd like to thank every single contributor for creating this epic project.”_ – [@TheCellMc]() |
-| _“Congratulations for your awesome work! This project is absolutely brilliant.”_ – [@quikote]() |
 
 ## Getting Started
 This project still in its development phase. New features (and also bugs) are introduced often and some functions may become deprecated. Please feel free to comment or give feedback.
@@ -161,10 +148,6 @@ For Wiegand based readers, you can configure D0 and D1 pins via settings page. B
 * Click "Add"
 * Congratulations, everything went well, if you encounter any issue feel free to ask help on GitHub.
 
-### Known Issues
-* You need to connect your MFRC522 reader to your ESP properly or you will end up with a boot loop
-* Please also check [GitHub issues](https://github.com/esprfid/esp-rfid/issues).
-
 #### Time
 We are syncing time from a NTP Server (in Client -aka infrastructure- Mode). This will require ESP to have an Internet connection. Additionally your ESP can also work without Internet connection too (Access Point -aka Ad-Hoc- Mode),  without giving up functionality.
 This will require you to do syncing manually. ESP can store and hold time for you approximately 51 days without a major issue, device time can drift from actual time depending on usage, temperature, etc.
@@ -184,52 +167,5 @@ What can be done to increase security? (by you and by us)
 ## Scalability
 Since we are limited on both flash and ram size things may get ugly at some point in the future. You can find out some test results below.
 
-### Tests
-
-#### 1) How many RFID Tag can be handled?
-Restore some randomly generated user data on File System worth:
-
-* 1000 separate "userfile"
-* random 4 Bytes long UID and
-* random User Names and
-* 4 bytes random Unix Time Stamp
-* each have "access type" 1 byte integer "1" or "0".
-
-Total 122,880 Bytes
-
-At least 1000 unique User (RFID Tag) can be handled, the test were performed on WeMos D1 mini.
-
-#### Additional testing is needed:
-
-* Logging needs testing. How long should it need to log access? What if a Boss needs whole year log?
-* Reliability on Flash (these NOR Flash have limited write cycle on their cells). It depends on manufacturer choice of Flash Chip and usage.
-
-## Community
-* [![Chat at https://gitter.im/esp-rfid/Lobby](https://badges.gitter.im/esp-rfid.svg)](https://gitter.im/esp-rfid/Lobby) Join community chat on Gitter
-
-### Projects that is based on esp-rfid
-* [ESP-IO](https://github.com/Pako2/EventGhostPlugins/tree/master/ESP-IO) Project to manipulate GPIOs with EventGhost
-* [ESP-RCM](https://github.com/Pako2/esp-rcm) Room Climate Monitor with ESP8266, HTU21D, Si7021, AM2320
-
-### Acknowledgements
-
-- @rneurink
-- @thunderace
-- @zeraien
-- @nardev
-- @romanzava
-- @arduino12
-- @Pako2
-
-See [ChangeLog](https://github.com/esprfid/esp-rfid/blob/dev/CHANGELOG.md)
-
-## Donations
-If this project helps you in a way, you can buy us a beer. You can make a donation to the ESP-RFID community with [Bountysource](https://salt.bountysource.com/teams/esp-rfid)
-
-* 2017-10-03 [steinar-t](https://github.com/steinar-t)
-* 2017-12-10 [saschaludwig](https://github.com/saschaludwig)
-* 2018-10-02 Dennis Parsch
-* 2019-01-12 Chris-topher Slater
-
 ## License
-The code parts written by ESP-RFID project's authors are licensed under [MIT License](https://github.com/esprfid/esp-rfid/blob/stable/LICENSE), 3rd party libraries that are used by this project are licensed under different license schemes, please check them out as well.
+The code parts are licensed under [MIT License](https://github.com/esprfid/esp-rfid/blob/stable/LICENSE), 3rd party libraries that are used by this project are licensed under different license schemes, please check them out as well.

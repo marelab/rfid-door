@@ -68,21 +68,29 @@ or
 * n quantity of Mifare Classic 1KB (recommended due to available code base) PICCs (RFID Tags) equivalent to User Number
 
 ## **Building** 
+### The AC Ring Bell Transformer
 Be carefull with 12V AC Ring bell transformers. The DC Voltage after the Diode bridge can be around 18V DC!!! That will not kill the NFC-DOOR hardware but it will kill a 12V RFID Reader that is connected to the NFC-DOOR. Why is that happening most Readers have a build in AMS1117 Voltage regulator wich has a maximum 16V input. The NFC-DOOR transforms the AC input Voltage in three stages first Stage is a diode bridge to transform AC to rippled DC then a Step Down Regulator generates 5V DC that can handle 24V DC input next the 5V is converted to 3,3V with a AMS1117 for the ESP. The NFC-DOOR won't get killed because the AMS1117 lives behind the 5V StepDown stage. The Rippled DC is connected directly to the power reader connectors. 
 The easiest way to get around that problem is using a 8V AC Ringbell transformer. For example someting like this:
 ![Showcase Gif](https://github.com/marelab/nfc-door/blob/master/grafics/klingeltrafo.jpg)
 Just use the 8V instead of 12V. The rippled DC after the Diode Bridge is around 14-15V and in the range a AMS1117 of the Reader can handle.
 
 
-
+### Placing the ACT4088 IC
 The ACT4088 Step Down is a quite tiny part and its quite inpossible to indetify Pin1 without a mircoscope or strong lense. As hint thats a picture of the ACT4088 to find Pin1 as marked in the image.
 ![Showcase Gif](https://github.com/marelab/nfc-door/blob/master/grafics/act4088_oriantation.png)
 
 ### Software
 
 #### Using Compiled Binaries
-Download compiled binaries from GitHub Releases page
-https://github.com/esprfid/esp-rfid/releases
+Download compiled binaries from GitHub Releases page:
+marelab modified firmware with extended MQTT support https://github.com/marelab/esp-rfid/releases 
+or the orignal firmware from https://github.com/esprfid/esp-rfid/releases
+
+#### Wich firmware should I use?
+If you want to have a smart home integration or want to manage more then one Door I would recomend the marelab version, because of the extended MQTT functions and multi device support.
+Otherwise you can use also the orginal firmware from the ESP-RFID Project. 
+
+#### Flashing the device
 On Windows you can use **"flash.bat"**, it will ask you which COM port that ESP is connected and then flashes it. You can use any flashing tool and do the flashing manually. The flashing process itself has been described at numerous places on Internet.
 
 #### Building With PlatformIO

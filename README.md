@@ -6,7 +6,7 @@ big thanks to the [ESP-RFID Project](https://github.com/esprfid/esp-rfid) with t
 ## NFC-DOOR
 NFC/RFID WIFI Access Control hardware interfacing a cheap MFRC522, PN532 RFID, RDM6300 readers or Wiegand RFID readers with a Espressif's ESP8266 Microcontroller as Wifi Bridge to drive the door open coil to unlock a home door and to include it into a home automatisation system. The pcb is designed with [KiCad](http://kicad-pcb.org/) an opensoure EDA System. Ready Gerber Files can be found under Gerber. Plz use the Version Tab for download the newest Release the Master Branch includes the current development stage! 
 
-![Showcase Gif](https://github.com/marelab/nfc-door/blob/master/grafics/nfc-door-V-1-1-3D.png) [![Board](https://github.com/marelab/nfc-door/blob/master/grafics/NFC-DOOR-PCB1.png)]
+![Showcase Gif](https://github.com/marelab/nfc-door/blob/master/grafics/nfc-door-V-1-1-3D.png) ![Board](https://github.com/marelab/nfc-door/blob/master/grafics/NFC-DOOR-PCB1.png)
 
 ## Differnces of the ESP-RFID Hardware to NFC-DOOR Hardware
 The marelab NFC-DOOR hardware: 
@@ -50,6 +50,12 @@ The marelab NFC-DOOR hardware:
 ## Getting Started
 New features (and also bugs) are introduced often and some functions may become deprecated. Please feel free to comment or give feedback.
 
+### Standard Door Bell Setup
+![Showcase Gif](https://github.com/marelab/nfc-door/blob/master/grafics/basicSetup.png)
+
+### NFC-DOOR integrated into Door Bell Setup
+![Showcase Gif](https://github.com/marelab/nfc-door/blob/master/grafics/rfidSetup.png)
+
 ### Hardware you need
 ### Hardware
 * [marelab NFC-DOOR Board](https://www.marelab.org/index.php/smarthome-iot/nfc-door) can be ordered here
@@ -83,7 +89,7 @@ New features (and also bugs) are introduced often and some functions may become 
 * Congratulations, everything went well, if you encounter any issue feel free to ask help on GitHub.
 
 
-## **Building** & Setuo Hardware
+## **Building** & Setup Hardware
 #### The AC Ring Bell Transformer
 Be carefull with 12V AC Ring bell transformers. The DC Voltage after the Diode bridge can be around 18V DC!!! That will not kill the NFC-DOOR hardware but it will kill a 12V RFID Reader that is connected to the NFC-DOOR. Why is that happening most Readers have a build in AMS1117 Voltage regulator wich has a maximum 16V input. The NFC-DOOR transforms the AC input Voltage in three stages first Stage is a diode bridge to transform AC to rippled DC then a Step Down Regulator generates 5V DC that can handle 24V DC input next the 5V is converted to 3,3V with a AMS1117 for the ESP. The NFC-DOOR won't get killed because the AMS1117 lives behind the 5V StepDown stage. The Rippled DC is connected directly to the power reader connectors. 
 The easiest way to get around that problem is using a 8V AC Ringbell transformer. For example someting like this:

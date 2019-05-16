@@ -47,7 +47,7 @@ The marelab NFC-DOOR hardware:
 * Open Source Hardware
 
 ## Getting Started
-This project still in its development phase. New features (and also bugs) are introduced often and some functions may become deprecated. Please feel free to comment or give feedback.
+New features (and also bugs) are introduced often and some functions may become deprecated. Please feel free to comment or give feedback.
 
 * Get the latest hardware release from [here.](https://github.com/marelab/nfc-door/releases)
 * Get the firmware software from [here.](https://github.com/marelab/esp-rfid/releases)
@@ -57,12 +57,11 @@ This project still in its development phase. New features (and also bugs) are in
 
 ### What You Will Need
 ### Hardware
-* [Official ESP-RFID Relay Board](https://www.tindie.com/products/nardev/esp-rfid-relay-board-12v-in-esp8266-board/)
-or
-* An ESP8266 module or a development board like **WeMos D1 mini** or **NodeMcu 1.0** with at least **32Mbit Flash (equals to 4MBytes)** (ESP32 does not supported for now)
+* [marelab NFC-DOOR Board](https://www.marelab.org/index.php/smarthome-iot/nfc-door) can be ordered here
 * A MFRC522 RFID PCD Module or PN532 NFC Reader Module or RDM6300 125KHz RFID Module Wiegand based RFID reader
-* A Relay Module (or you can build your own circuit)
 * n quantity of Mifare Classic 1KB (recommended due to available code base) PICCs (RFID Tags) equivalent to User Number
+* A door Relay 8-12V
+* A Ringbell Transformer 8-12V 
 
 ## **Building** 
 #### The AC Ring Bell Transformer
@@ -70,29 +69,32 @@ Be carefull with 12V AC Ring bell transformers. The DC Voltage after the Diode b
 The easiest way to get around that problem is using a 8V AC Ringbell transformer. For example someting like this:
 ![Showcase Gif](https://github.com/marelab/nfc-door/blob/master/grafics/klingeltrafo.jpg)
 Just use the 8V instead of 12V. The rippled DC after the Diode Bridge is around 14-15V and in the range a AMS1117 of the Reader can handle.
-
 Just for details about german standard and regulations for the bell transformer that has to be used. https://de.wikipedia.org/wiki/Klingeltransformator
-
 
 ####  Placing the ACT4088 IC
 The ACT4088 Step Down is a quite tiny part and its quite inpossible to indetify Pin1 without a mircoscope or strong lense. As hint thats a picture of the ACT4088 to find Pin1 as marked in the image.
 ![Showcase Gif](https://github.com/marelab/nfc-door/blob/master/grafics/act4088_oriantation.png)
 
+#### Special Configuration solder bridges
+Description of the Solder Bridges
+
 ## Software
+
+#### Wich firmware should I use?
+If you want to have a smart home integration or want to manage more then one Door I would recomend the marelab version, because of the extended MQTT functions and multi device support.
+Otherwise you can use also the orginal firmware from the ESP-RFID Project. 
 
 #### Using Compiled Binaries
 Download compiled binaries from GitHub Releases page:
 marelab modified firmware with extended MQTT support https://github.com/marelab/esp-rfid/releases 
 or the orignal firmware from https://github.com/esprfid/esp-rfid/releases
 
-#### Wich firmware should I use?
-If you want to have a smart home integration or want to manage more then one Door I would recomend the marelab version, because of the extended MQTT functions and multi device support.
-Otherwise you can use also the orginal firmware from the ESP-RFID Project. 
-
 #### Flashing the device
+For a selfmade NF-DOOR pcb you need a USB to serial Bridge to flash the first Version. New Firmware Versions can then be updated by OTA (Over the Air Wifi Update) done with the web gui.
+If you bought the NFC-DOOR Hardware the ESP is already programmed with the firmware so you don't need the USB to serial adapter for flashing.
 On Windows you can use **"flash.bat"**, it will ask you which COM port that ESP is connected and then flashes it. You can use any flashing tool and do the flashing manually. The flashing process itself has been described at numerous places on Internet.
 
-#### Building With PlatformIO
+#### Self building With PlatformIO
 ##### Backend
 The build environment is based on [PlatformIO](http://platformio.org). Follow the instructions found here: http://platformio.org/#!/get-started for installing it but skip the ```platform init``` step as this has already been done, modified and it is included in this repository. In summary:
 
@@ -106,10 +108,14 @@ platformio run
 
 When you run ```platformio run``` for the first time, it will download the toolchains and all necessary libraries automatically.
 
+##### Debug information
+When you compiling and flashing a debug Version the ESP sends Debug Messages over the Serial Port thats usefull for trace and test purpose.
+
 ##### Useful commands:
 
 * ```platformio run``` - process/build all targets
-* ```platformio run -e generic -t upload``` - process/build and flash just the ESP12e target (the NodeMcu v2)
+* ```platformio run -e generic -t upload``` - process/build and flash just the ESP12e target 
+* ```platformio run -e debug -t upload``` - process/build and flash just the ESP12e target 
 * ```platformio run -t clean``` - clean project (remove compiled files)
 
 The resulting (built) image(s) can be found in the directory ```/bin``` created during the build process.

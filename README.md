@@ -125,7 +125,7 @@ New features (and also bugs) are introduced often and some functions may become 
 |-------:|:-------------------------------------------------------------------------------------------------------------------:|
 | A      | Switches the Magnetic Lock/Door Relais by Opto Mosfet and 2W Magnetic Lock Resistor that limits starting current    |
 | B      | 3,3V Linear Driver for ESP8266 supply                                                                               | 
-| C      | Diode Bridge & Self Resetable Fuse for converting AC to DC Ripple power                                             | 
+| C      | Diode Bridge & Self Resetable Fuse for converting AC to DC Ripple power. The Cxx Cap is decoupled by a the Diode Dxx if the 12V of the Bridge falls down for ms while the magnetic lock is used it delivers the energy for the 5V stage  | 
 | D      | 5V StepDown Converter that powers (B) and the MosFet for (E)                                                        | 
 | E      | In / Out 3,3V Signal Lines ESP to 5V on Conector                                                                    | 
 
@@ -144,9 +144,27 @@ The ACT4088 Step Down is a quite tiny part and its quite inpossible to indetify 
 CAD Zeichnung für Bohrungen im gehäuse 
 
 #### Special Configuration solder bridges
-The board can be customized for special needs over some solder Bridges see the pictures of the PCB Back & Top where to find them
+The board can be customized for special needs if you don't want or have a standard configuration. Some solder Bridges see the pictures of the PCB Back & Top where to find them can configure direct 12V DC Input and or disable the 5V Stage for the D0 / D1 pins. 
+
 ![RFID-DOOR back PCB](https://github.com/marelab/rfid-door/blob/master/grafics/nfc-door-V1-1-back-pcb.png) ![RFID-DOOR top PCB](https://github.com/marelab/rfid-door/blob/master/grafics/rfid-door-V1-1-top-pcb.png)
 
+!!!Warning all described special configuration will disable some safety features of the board design so you should totaly know what you do using this!!!
+
+```
+12V DC Power Input
+If your power source is 12V DC you don't need the Diode Bridge and the Capacitor Cxx to be soldered on the board. 
+Solder the JP1 and JP2 Solder Bridge Jumpers  
+```
+
+```
+3,3V DO / D1 Wiegand Interface
+If you don't need a 5V TTL compatble In/Out of the D1/D0 Lines just solder the Solder Bridges JP7/JP8. Don't solder then the Mosfets Q1 & Q2 as well as the four Resistors Rxx,Rxx,Rxx,Rxx. 
+```
+
+```
+Bridge the Magnetic Lock / Door Relais current limitation 
+By solder the JP3 Bridge the R1 2W Resistor is bridged and so no current limitation of a starting magentic coil saves the MosFet!!! The R1 Resitor don't need to be solderd anymore. 
+```
 
 
 ## Software

@@ -92,14 +92,15 @@ New features (and also bugs) are introduced often and some functions may become 
 ## **Building** & Setup Hardware
 
 ### RFID-DOOR Connectors
-![Showcase Gif](https://github.com/marelab/rfid-door/blob/master/grafics/rfid-door-con.png)  
+![Showcase Gif](https://github.com/marelab/rfid-door/blob/master/grafics/rfid-door-con.png) 
+ 
 | Number | Function                                     | ESP8266           |
 |-------:|:--------------------------------------------:|:------------------|
 | 1      | DoorR / Magnetic Look / Door Relais Conector |    -              |
 | 2      | DoorR / Magnetic Look / Door Relais Conector |    -              |
 | 3      | 12V out / 12V+ DC                            |    -              |
-| 4      | D0 Wiegand D0                                | GPIO-04 (*5V)     |
-| 5      | D1 Wiegand D1                                | GPIO-05 (*5V)     |
+| 4      | D0 Wiegand D0                                | GPIO-04*          |
+| 5      | D1 Wiegand D1                                | GPIO-05*	        |
 | 6      | LED                                          | GPIO-05           |
 | 7      | W26                                          | GPIO-05           |
 | 8      | BUZ                                          | GPIO-05           |
@@ -114,9 +115,12 @@ New features (and also bugs) are introduced often and some functions may become 
 |        | JP3-3 RX Serial Connector to ESP8266         | GPIO-05           |
 |        | JP3-4 GND Serial Connector to ESP8266        | GPIO-05           |
 
+(*) 5V In/Output Signal
+
 
 ### RFID-DOOR Functional Blocks
 ![Showcase Gif](https://github.com/marelab/rfid-door/blob/master/grafics/rfid-door-V1-1-top-overview.png)
+
 | Letter | Hardware Function Block                                                                                             | 
 |-------:|:-------------------------------------------------------------------------------------------------------------------:|
 | A      | Switches the Magnetic Lock/Door Relais by Opto Mosfet and 2W Magnetic Lock Resistor that limits starting current    |
@@ -140,7 +144,7 @@ The ACT4088 Step Down is a quite tiny part and its quite inpossible to indetify 
 CAD Zeichnung für Bohrungen im gehäuse 
 
 #### Special Configuration solder bridges
-![RFID-DOOR back PCB](https://github.com/marelab/rfid-door/blob/master/grafics/nfc-door-V1-1-back-pcb.png.png) ![RFID-DOOR top PCB](https://github.com/marelab/rfid-door/blob/master/grafics/nfc-door-V1-1-top-pcb.png.png)
+![RFID-DOOR back PCB](https://github.com/marelab/rfid-door/blob/master/grafics/nfc-door-V1-1-back-pcb.png) ![RFID-DOOR top PCB](https://github.com/marelab/rfid-door/blob/master/grafics/nfc-door-V1-1-top-pcb.png)
 
 ## Software
 

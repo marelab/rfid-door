@@ -144,7 +144,10 @@ The ACT4088 Step Down is a quite tiny part and its quite inpossible to indetify 
 CAD Zeichnung für Bohrungen im gehäuse 
 
 #### Special Configuration solder bridges
-![RFID-DOOR back PCB](https://github.com/marelab/rfid-door/blob/master/grafics/nfc-door-V1-1-back-pcb.png) ![RFID-DOOR top PCB](https://github.com/marelab/rfid-door/blob/master/grafics/nfc-door-V1-1-top-pcb.png)
+The board can be customized for special needs over some solder Bridges see the pictures of the PCB Back & Top where to find them
+![RFID-DOOR back PCB](https://github.com/marelab/rfid-door/blob/master/grafics/nfc-door-V1-1-back-pcb.png) ![RFID-DOOR top PCB](https://github.com/marelab/rfid-door/blob/master/grafics/rfid-door-V1-1-top-pcb.png)
+
+
 
 ## Software
 

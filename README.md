@@ -91,7 +91,15 @@ New features (and also bugs) are introduced often and some functions may become 
 
 ## **Building** & Setup Hardware
 #### RFID-DOOR Connectors
-|![Showcase Gif](https://github.com/marelab/rfid-door/blob/master/grafics/rfid-door-con.png) | | Number | Function                                   | 
+
+
+<table>
+  <tr>
+    <th>
+	![Showcase Gif](https://github.com/marelab/rfid-door/blob/master/grafics/rfid-door-con.png)  
+	</th>
+    <th>
+| Number | Function                                   | 
 |-------:|:------------------------------------------:|
 | 1      | Magnetic Look / Door Relais Conector       |
 | 2      | Magnetic Look / Door Relais Conector       | 
@@ -106,8 +114,10 @@ New features (and also bugs) are introduced often and some functions may become 
 | 11     | D2                                         | 
 | 12     | D1                                         | 
 | 13     | D1                                         | 
-| 14     | D1                                         |                                    | 
-
+| 14     | D1                                         | 
+	</th> 
+  </tr>
+</table>
 
 #### RFID-DOOR Functional Blocks
 ![Showcase Gif](https://github.com/marelab/rfid-door/blob/master/grafics/rfid-door-V1-1-top-overview.png)

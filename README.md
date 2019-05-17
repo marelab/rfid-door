@@ -148,22 +148,27 @@ The board can be customized for special needs if you don't want or have a standa
 
 ![RFID-DOOR back PCB](https://github.com/marelab/rfid-door/blob/master/grafics/nfc-door-V1-1-back-pcb.png) ![RFID-DOOR top PCB](https://github.com/marelab/rfid-door/blob/master/grafics/rfid-door-V1-1-top-pcb.png)
 
-!!!Warning all described special configuration will disable some safety features of the board design so you should totaly know what you do using this!!!
+!!!Warning all described here might disable some safety features of the board so you should totaly know what you are doing using this!!!
 
 ```
-12V DC Power Input
-If your power source is 12V DC you don't need the Diode Bridge and the Capacitor Cxx to be soldered on the board. 
-Solder the JP1 and JP2 Solder Bridge Jumpers  
-```
-
-```
-3,3V DO / D1 Wiegand Interface
-If you don't need a 5V TTL compatble In/Out of the D1/D0 Lines just solder the Solder Bridges JP7/JP8. Don't solder then the Mosfets Q1 & Q2 as well as the four Resistors Rxx,Rxx,Rxx,Rxx. 
+##### 12V DC Power Input
+If your power source is 12V DC you don't need the Diode Bridge and the 
+Capacitor Cxx to be soldered on the board. Solder the JP1 and JP2 
+Solder Bridge Jumpers  
 ```
 
 ```
-Bridge the Magnetic Lock / Door Relais current limitation 
-By solder the JP3 Bridge the R1 2W Resistor is bridged and so no current limitation of a starting magentic coil saves the MosFet!!! The R1 Resitor don't need to be solderd anymore. 
+##### 3,3V DO / D1 Wiegand Interface
+If you don't need a 5V TTL compatble In/Out of the D1/D0 Lines just 
+solder the Solder Bridges JP7/JP8. Don't solder then the Mosfets Q1 & 
+Q2 as well as the four Resistors Rxx,Rxx,Rxx,Rxx. 
+```
+
+```
+##### Bridge the Magnetic Lock / Door Relais current limitation 
+By solder the JP3 Bridge the R1 2W Resistor is bridged and so no current 
+limitation of a starting magentic coil / Door Lock saves the MosFet!!! 
+The R1 Resitor don't need to be solderd anymore. 
 ```
 
 

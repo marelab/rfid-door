@@ -5,9 +5,9 @@
 big thanks to the [ESP-RFID Project](https://github.com/esprfid/esp-rfid) with the work they have done. The "rfid-door" hardware is 100% compatible with their software also a modified [Firmware](https://github.com/marelab/esp-rfid/releases) with extended MQTT support is included with the marelab RFID-DOOR Version that can be used. Just the hardware design is differnt in my version. The RFID-DOOR pcb is designed to be powered directly from the AC Ring Bell transformer (8-12V AC). But can also be configured to use a 8-12V DC power by just solder bridges. Main reason why I used a different design was the fact that I didn't wanted to setup a new DC source and cables for that device, it can be integrated without any extra power infrastructure. Most german households have a AC Ringbell with 8 or 12V transformer next to the door. 
 
 ## RFID-DOOR
-NFC/RFID WIFI Access Control hardware interfacing a cheap MFRC522, PN532 RFID, RDM6300 readers or Wiegand RFID readers with a Espressif's ESP8266 Microcontroller as Wifi Bridge to drive the door open coil to unlock a home door and to include it into a home automatisation system. The pcb is designed with [KiCad](http://kicad-pcb.org/) an opensoure EDA System. Ready Gerber Files can be found under Gerber. Plz use the Version Tab for download the newest Release the Master Branch includes the current development stage! 
+![logo](https://github.com/marelab/rfid-door/blob/master/grafics/pure-rfid-door-logo.png) NFC/RFID WIFI Access Control hardware interfacing a cheap MFRC522, PN532 RFID, RDM6300 readers or Wiegand RFID readers with a Espressif's ESP8266 Microcontroller as Wifi Bridge to drive the door open coil to unlock a home door and to include it into a home automatisation system. The pcb is designed with [KiCad](http://kicad-pcb.org/) an opensoure EDA System. Ready Gerber Files can be found under Gerber. Plz use the Version Tab for download the newest Release the Master Branch includes the current development stage! 
 
-![Board](https://github.com/marelab/rfid-door/blob/master/grafics/rfid-door-pcb2.png) ![logo](https://github.com/marelab/rfid-door/blob/master/grafics/pure-rfid-door-logo.png)
+![Board](https://github.com/marelab/rfid-door/blob/master/grafics/rfid-door-pcb2.png) 
 
 ## Differnces of the ESP-RFID Hardware to RFID-DOOR Hardware
 The marelab RFID-DOOR hardware: 

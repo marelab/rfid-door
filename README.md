@@ -91,36 +91,36 @@ New features (and also bugs) are introduced often and some functions may become 
 
 ## **Building** & Setup Hardware
 #### RFID-DOOR Connectors
+![Showcase Gif](https://github.com/marelab/rfid-door/blob/master/grafics/rfid-door-con.png)  
 
+| Number | Function                        | 
+|-------:|:--------------------------------------------:|
+| 1      | DoorR / Magnetic Look / Door Relais Conector |
+| 2      | DoorR / Magnetic Look / Door Relais Conector | 
+| 3      | 12V out / 12V+ DC                            | 
+| 4      | D0 Wiegand D0                                | 
+| 5      | D1 Wiegand D1                                | 
+| 6      | LED                                          | 
+| 7      | W26                                          |
+| 8      | BUZ                                          | 
+| 9      | GND                                          | 
+| 10     | GND                                          | 
+| 11     | 12V AC                                       | 
+| 12     | 12V AC                                       | 
+| 13     | JP4 Reset                                    | 
+| 14     | JP3 Firmware Upload enable                   | 
 
-<table>
-  <tr>
-    <th>
-	![Showcase Gif](https://github.com/marelab/rfid-door/blob/master/grafics/rfid-door-con.png)  
-	</th>
-    <th>
-| Number | Function                                   | 
-|-------:|:------------------------------------------:|
-| 1      | Magnetic Look / Door Relais Conector       |
-| 2      | Magnetic Look / Door Relais Conector       | 
-| 3      | 12V+ DC                                    | 
-| 4      | Wiegand D0                                 | 
-| 5      | Wiegand D1                                 | 
-| 6      | D1                                         | 
-| 7      | D8                                         |
-| 8      | D7                                         | 
-| 9      | D6                                         | 
-| 10     | D5                                         | 
-| 11     | D2                                         | 
-| 12     | D1                                         | 
-| 13     | D1                                         | 
-| 14     | D1                                         | 
-	</th> 
-  </tr>
-</table>
 
 #### RFID-DOOR Functional Blocks
 ![Showcase Gif](https://github.com/marelab/rfid-door/blob/master/grafics/rfid-door-V1-1-top-overview.png)
+
+| Letter | Hardware Function Block                                                                                             | 
+|-------:|:-------------------------------------------------------------------------------------------------------------------:|
+| A      | Switches the Magnetic Lock/Door Relais by Opto Mosfet and 2W Magnetic Lock Resistor that limits starting current    |
+| B      | 3,3V Linear Driver for ESP8266 supply                                                                               | 
+| C      | Diode Bridge & Self Resetable Fuse for converting AC to DC Ripple power                                             | 
+| D      | 5V StepDown Converter that powers (B) and the MosFet for (E)                                                        | 
+| E      | In / Out 3,3V Signal Lines ESP to 5V on Conector                                                                    | 
 
 #### The AC Ring Bell Transformer
 Be carefull with 12V AC Ring bell transformers. The DC Voltage after the Diode bridge can be around 18V DC!!! That will not kill the RFID-DOOR hardware but it will kill a 12V RFID Reader that is connected to the RFID-DOOR. Why is that happening most Readers have a build in AMS1117 Voltage regulator wich has a maximum 16V input. The RFID-DOOR transforms the AC input Voltage in three stages first Stage is a diode bridge to transform AC to rippled DC then a Step Down Regulator generates 5V DC that can handle 24V DC input next the 5V is converted to 3,3V with a AMS1117 for the ESP. The RFID-DOOR won't get killed because the AMS1117 lives behind the 5V StepDown stage. The Rippled DC is connected directly to the power reader connectors. 

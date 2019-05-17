@@ -1,15 +1,15 @@
 # ESP8266 RFID - Access Control with Wiegand Protocol powerd by Door Bell transformer 8-12V AC or DC
 
 ## First of all 
-big thanks to the [ESP-RFID Project](https://github.com/esprfid/esp-rfid) with the work they have done. The "nfc-door" hardware is 100% compatible with their software also a modified [Firmware](https://github.com/marelab/esp-rfid/releases) with extended MQTT support is included with the marelab NFC-DOOR Version that can be used. Just the hardware design is differnt in my version. The nfc-door pcb is designed to be powered directly from the AC Ring Bell transformer (8-12V AC). But can also be configured to use a 8-12V DC power by just solder bridges. Main reason why I used a different design was the fact that I didn't wanted to setup a new DC source and cables for that device, it can be integrated without any extra power infrastructure. Most german households have a AC Ringbell with 8 or 12V transformer next to the door. 
+big thanks to the [ESP-RFID Project](https://github.com/esprfid/esp-rfid) with the work they have done. The "rfid-door" hardware is 100% compatible with their software also a modified [Firmware](https://github.com/marelab/esp-rfid/releases) with extended MQTT support is included with the marelab RFID-DOOR Version that can be used. Just the hardware design is differnt in my version. The RFID-DOOR pcb is designed to be powered directly from the AC Ring Bell transformer (8-12V AC). But can also be configured to use a 8-12V DC power by just solder bridges. Main reason why I used a different design was the fact that I didn't wanted to setup a new DC source and cables for that device, it can be integrated without any extra power infrastructure. Most german households have a AC Ringbell with 8 or 12V transformer next to the door. 
 
-## NFC-DOOR
+## RFID-DOOR
 NFC/RFID WIFI Access Control hardware interfacing a cheap MFRC522, PN532 RFID, RDM6300 readers or Wiegand RFID readers with a Espressif's ESP8266 Microcontroller as Wifi Bridge to drive the door open coil to unlock a home door and to include it into a home automatisation system. The pcb is designed with [KiCad](http://kicad-pcb.org/) an opensoure EDA System. Ready Gerber Files can be found under Gerber. Plz use the Version Tab for download the newest Release the Master Branch includes the current development stage! 
 
-![Showcase Gif](https://github.com/marelab/nfc-door/blob/master/grafics/nfc-door-V-1-1-3D.png) ![Board](https://github.com/marelab/nfc-door/blob/master/grafics/NFC-DOOR-PCB1.png)
+![Showcase Gif](https://github.com/marelab/rfid-door/blob/master/grafics/rfid-door-V-1-1-3D.png) ![Board](https://github.com/marelab/rfid-door/blob/master/grafics/rfid-door-pcb1.png)
 
-## Differnces of the ESP-RFID Hardware to NFC-DOOR Hardware
-The marelab NFC-DOOR hardware: 
+## Differnces of the ESP-RFID Hardware to RFID-DOOR Hardware
+The marelab RFID-DOOR hardware: 
 ```
 * Can be powered by AC RingBell transformer directly no seperate power source need at the installation spot
 * No mechanical Relais just Silicon Door coil is driven by smal opto mosfet
@@ -33,14 +33,14 @@ The marelab NFC-DOOR hardware:
 * Thanks to ESPAsyncWebServer Library communication is Asynchronous
 ### Official Hardware
 * Small size form factor just 4,5cm * 4,5 cm
-* Single power source (Ring Bell transformer) for NFC-DOOR hardware & RFID Wiegand Reader and magnetic lock for opening doors.
+* Single power source (Ring Bell transformer) for RFID-DOOR hardware & RFID Wiegand Reader and magnetic lock for opening doors.
 * Exposed programming pins for ESP8266
 * Regarding hardware design, you get multiple possible setup options:
 * Forward Bell ringing on reader to MCU or pass it out of board
 * Control reader’s status LED
 * Control reader’s status BUZZER sound *
 * Power reader, lock and the board through single 8V, AC Ring Bell Transformer
-* Power for Magnetic Lock / Door Relais is supplied by NFC-DOOR Hardware
+* Power for Magnetic Lock / Door Relais is supplied by RFID-DOOR Hardware
 * Possible to use any kind and any type of Wiegand readers
 * Smart Home integration over MQTT
 * Fits in an universal enclosures with DIN mount
@@ -51,23 +51,23 @@ The marelab NFC-DOOR hardware:
 New features (and also bugs) are introduced often and some functions may become deprecated. Please feel free to comment or give feedback.
 
 ### Standard Door Bell Setup
-![Showcase Gif](https://github.com/marelab/nfc-door/blob/master/grafics/basicSetup.png)
+![Showcase Gif](https://github.com/marelab/rfid-door/blob/master/grafics/basicSetup.png)
 
-### NFC-DOOR integrated into Door Bell Setup
-![Showcase Gif](https://github.com/marelab/nfc-door/blob/master/grafics/rfidSetup.png)
+### RFID-DOOR integrated into Door Bell Setup
+![Showcase Gif](https://github.com/marelab/rfid-door/blob/master/grafics/rfidSetup.png)
 
 ### Hardware you need
 ### Hardware
-* [marelab NFC-DOOR Board](https://www.marelab.org/index.php/smarthome-iot/nfc-door) can be ordered here
+* [marelab RFID-DOOR Board](https://www.marelab.org/index.php/smarthome-iot/rfid-door) can be ordered here
 * A MFRC522 RFID PCD Module or PN532 NFC Reader Module or RDM6300 125KHz RFID Module Wiegand based RFID reader
 * n quantity of Mifare Classic 1KB (recommended due to available code base) PICCs (RFID Tags) equivalent to User Number
 * A door Relay 8-12V
 * A Ringbell Transformer 8-12V 
 
 ### Software you need
-* Get the latest hardware release from [here.](https://github.com/marelab/nfc-door/releases)
+* Get the latest hardware release from [here.](https://github.com/marelab/rfid-door/releases)
 * Get the firmware software from [here.](https://github.com/marelab/esp-rfid/releases)
-* See Building [Building](https://github.com/marelab/nfc-door#building)
+* See Building [Building](https://github.com/marelab/rfid-door#building)
 * See [Security](https://github.com/marelab/esp-rfid#security) for your safety.
 * See [ChangeLog](https://github.com/marelab/esp-rfid/blob/dev/CHANGELOG.md)
 
@@ -90,16 +90,22 @@ New features (and also bugs) are introduced often and some functions may become 
 
 
 ## **Building** & Setup Hardware
+#### RFID-DOOR Connectors
+![Showcase Gif](https://github.com/marelab/rfid-door/blob/master/grafics/rfid-door-con.png)
+
+#### RFID-DOOR Functional Blocks
+![Showcase Gif](https://github.com/marelab/rfid-door/blob/master/grafics/rfid-door-V1-1-top-overview.png)
+
 #### The AC Ring Bell Transformer
-Be carefull with 12V AC Ring bell transformers. The DC Voltage after the Diode bridge can be around 18V DC!!! That will not kill the NFC-DOOR hardware but it will kill a 12V RFID Reader that is connected to the NFC-DOOR. Why is that happening most Readers have a build in AMS1117 Voltage regulator wich has a maximum 16V input. The NFC-DOOR transforms the AC input Voltage in three stages first Stage is a diode bridge to transform AC to rippled DC then a Step Down Regulator generates 5V DC that can handle 24V DC input next the 5V is converted to 3,3V with a AMS1117 for the ESP. The NFC-DOOR won't get killed because the AMS1117 lives behind the 5V StepDown stage. The Rippled DC is connected directly to the power reader connectors. 
+Be carefull with 12V AC Ring bell transformers. The DC Voltage after the Diode bridge can be around 18V DC!!! That will not kill the RFID-DOOR hardware but it will kill a 12V RFID Reader that is connected to the RFID-DOOR. Why is that happening most Readers have a build in AMS1117 Voltage regulator wich has a maximum 16V input. The RFID-DOOR transforms the AC input Voltage in three stages first Stage is a diode bridge to transform AC to rippled DC then a Step Down Regulator generates 5V DC that can handle 24V DC input next the 5V is converted to 3,3V with a AMS1117 for the ESP. The RFID-DOOR won't get killed because the AMS1117 lives behind the 5V StepDown stage. The Rippled DC is connected directly to the power reader connectors. 
 The easiest way to get around that problem is using a 8V AC Ringbell transformer. For example someting like this:
-![Showcase Gif](https://github.com/marelab/nfc-door/blob/master/grafics/klingeltrafo.jpg)
+![Showcase Gif](https://github.com/marelab/rfid-door/blob/master/grafics/klingeltrafo.jpg)
 Just use the 8V instead of 12V. The rippled DC after the Diode Bridge is around 14-15V and in the range a AMS1117 of the Reader can handle.
 Just for details about german standard and regulations for the bell transformer that has to be used. https://de.wikipedia.org/wiki/Klingeltransformator
 
 ####  Placing the ACT4088 IC
 The ACT4088 Step Down is a quite tiny part and its quite inpossible to indetify Pin1 without a mircoscope or strong lense. As hint thats a picture of the ACT4088 to find Pin1 as marked in the image.
-![Showcase Gif](https://github.com/marelab/nfc-door/blob/master/grafics/act4088_oriantation.png)
+![Showcase Gif](https://github.com/marelab/rfid-door/blob/master/grafics/act4088_oriantation.png)
 
 #### Encloser cad screw drwaing
 CAD Zeichnung für Bohrungen im gehäuse 
@@ -120,7 +126,7 @@ or the orignal firmware from https://github.com/esprfid/esp-rfid/releases
 
 #### Flashing the device
 For a selfmade NF-DOOR pcb you need a USB to serial Bridge to flash the first Version. New Firmware Versions can then be updated by OTA (Over the Air Wifi Update) done with the web gui.
-If you bought the NFC-DOOR Hardware the ESP is already programmed with the firmware so you don't need the USB to serial adapter for flashing.
+If you bought the RFID-DOOR Hardware the ESP is already programmed with the firmware so you don't need the USB to serial adapter for flashing.
 On Windows you can use **"flash.bat"**, it will ask you which COM port that ESP is connected and then flashes it. You can use any flashing tool and do the flashing manually. The flashing process itself has been described at numerous places on Internet.
 
 #### Self building With PlatformIO

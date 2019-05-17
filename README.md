@@ -92,6 +92,7 @@ New features (and also bugs) are introduced often and some functions may become 
 ## **Building** & Setup Hardware
 #### RFID-DOOR Connectors
 ![Showcase Gif](https://github.com/marelab/rfid-door/blob/master/grafics/rfid-door-con.png)
+
 | Number | Function                                   | 
 |-------:|:------------------------------------------:|
 | 1      | Magnetic Look / Door Relais Conector       |

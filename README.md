@@ -6,7 +6,7 @@ big thanks to the [ESP-RFID Project](https://github.com/esprfid/esp-rfid) with t
 
 ## RFID-DOOR
  <img align="left" src="https://github.com/marelab/rfid-door/blob/master/grafics/pure-rfid-door-logo.png">
- NFC/RFID WIFI Access Control hardware interfacing a cheap MFRC522, PN532 RFID, RDM6300 readers or Wiegand RFID readers with a Espressif's ESP8266 Microcontroller as Wifi Bridge to drive the door open coil to unlock a home door and to include it into a home automatisation system. The pcb is designed with [KiCad](http://kicad-pcb.org/) an opensoure EDA System. Ready Gerber Files can be found under Gerber. Plz use the Version Tab for download the newest Release the Master Branch includes the current development stage! 
+ NFC/RFID WIFI Access Control hardware interfacing a cheap MFRC522, PN532 RFID, RDM6300 readers or Wiegand RFID readers with a Espressif's ESP8266 Microcontroller as Wifi Bridge to drive the door open coil to unlock a home door and to include it into a home automatisation system. The pcb is designed with [KiCad](http://kicad.org/) an opensoure EDA System. Ready Gerber Files can be found under Gerber. Plz use the Version Tab for download the newest Release the Master Branch includes the current development stage! 
 
 ![Board](https://github.com/marelab/rfid-door/blob/master/grafics/rfid-door-pcb2.png) 
 
